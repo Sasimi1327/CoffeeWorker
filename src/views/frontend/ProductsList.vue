@@ -2,6 +2,13 @@
 import Swal from 'sweetalert2';
 import PaginationComponent from '@/components/PaginationComponent.vue';
 
+import AllCoffee from '@/assets/coffee_type/AllCoffee.avif';
+import Expresso from '@/assets/coffee_type/Expresso.avif';
+import Americano from '@/assets/coffee_type/Americano.avif';
+import MilkCoffee from '@/assets/coffee_type/MilkCoffee.avif';
+import Chocolate from '@/assets/coffee_type/Chocolate.avif';
+import Special from '@/assets/coffee_type/Special.avif';
+
 const { VITE_URL, VITE_PATH } = import.meta.env;
 
 export default {
@@ -12,21 +19,37 @@ export default {
     return {
       selectType: '全部商品',
       coffeeType: [
-        { AllCoffee: '全部商品' },
-        { Expresso: '濃縮咖啡' },
-        { Americano: '美式咖啡' },
-        { MilkCoffee: '牛奶咖啡' },
-        { Chocolate: '巧克力咖啡' },
-        { Special: '特調咖啡' }],
+        {
+          AllCoffee: '全部商品',
+          imgSrc: AllCoffee,
+        },
+        {
+          Expresso: '濃縮咖啡',
+          imgSrc: Expresso,
+        },
+        {
+          Americano: '美式咖啡',
+          imgSrc: Americano,
+        },
+        {
+          MilkCoffee: '牛奶咖啡',
+          imgSrc: MilkCoffee,
+        },
+        {
+          Chocolate: '巧克力咖啡',
+          imgSrc: Chocolate,
+        },
+        {
+          Special: '特調咖啡',
+          imgSrc: Special,
+        }],
       products: [],
       pages: {},
     };
   },
   methods: {
     getImagePath(type) {
-      const keyName = Object.keys(type)[0];
-      const imagePath = `src/assets/coffee_type/${keyName}.avif`;
-      return imagePath;
+      return Object.keys(type)[0];
     },
     updateCategory(category) {
       this.selectType = category;
@@ -75,7 +98,8 @@ export default {
     <div class="row">
       <div class="col-md-4 col-lg-2" v-for="(type, idx) in coffeeType" :key="idx">
         <div class="card d-flex justify-content-center align-items-center border-0">
-          <img :src="getImagePath(type)" width="200" height="200"
+            {{ type.imgPath }}
+          <img :src="type.imgSrc" width="200" height="200"
             class="img-thumbnail object-fit-cover">
           <div class="card-body">
             <a class="btn text-light-brown stretched-link fz-5"
