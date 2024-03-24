@@ -1,0 +1,103 @@
+$custom-colors: (
+  "primary":    $primary,
+  "secondary":  $secondary,
+  "light-brown": $light-brown,
+  "dark-brown": $dark-brown,
+  "coronation": $coronation,
+  "black":      $black,
+  "white":      $white,
+);
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
+$custom-font-sizes: (
+  1: $h1-fz, //48px
+  2: $h2-fz, //32px
+  3: $h3-fz, //28px
+  4: $h4-fz, //24px
+  5: $h5-fz, //20px
+  6: $h6-fz, //18px
+  7: $h7-fz, //16px
+  8: $h8-fz, //14px
+  9: $h9-fz, //12px
+);
+$font-sizes: map-merge($font-sizes , $custom-font-sizes);
+
+//spacer
+$custom-spacers: (
+  0: 0,
+  1: $spacer * .25,
+  2: $spacer * .5,
+  3: $spacer * .75,
+  4: $spacer,
+  5: $spacer * 1.25,
+  6: $spacer * 1.5,
+  7: $spacer * 1.75,
+  8: $spacer * 2,
+  9: $spacer * 2.25,
+  10: $spacer * 2.5,
+  11: $spacer * 2.75,
+  12: $spacer * 3,
+  13: $spacer * 3.25,
+  14: $spacer * 3.5,
+  15: $spacer * 3.75,
+  16: $spacer * 4,
+  17: $spacer * 4.25,
+  18: $spacer * 4.5,
+  19: $spacer * 4.75,
+  20: $spacer * 5,
+  21: $spacer * 5.25,
+  22: $spacer * 5.5,
+  23: $spacer * 5.75,
+  24: $spacer * 6,
+  25: $spacer * 6.25,
+);
+$spacers: map-merge($spacers , $custom-spacers);
+
+$custom-position-values: (
+  0: 0,
+  5: 5%,
+  10: 10%,
+  15: 15%,
+  20: 20%,
+  25: 25%,
+  30: 30%,
+  35: 35%,
+  40: 40%,
+  45: 45%,
+  50: 50%,
+  55: 55%,
+  60: 60%,
+  65: 65%,
+  70: 70%,
+  75: 75%,
+  80: 80%,
+  85: 85%,
+  90: 90%,
+  95: 95%,
+  100: 100%
+);
+$position-values: map-merge($position-values , $custom-position-values);
+
+$gradient: linear-gradient(180deg, $white, $coronation);
+
+.bg-gradient {
+  @media(min-width:768px){
+    @include gradient-y($white, $coronation, 50%, 50%);
+  }
+}
+.bg-gradient-reverse {
+  @media(min-width:768px){
+    @include gradient-y($coronation, $white, 50%, 50%);
+  }
+}
+
+@mixin pc {
+  @media(min-width: map-get($grid-breakpoints, "lg")){
+      @content
+  }
+};
+@mixin pad {
+  @media(min-width: map-get($grid-breakpoints, "md")){
+      @content
+  }
+};

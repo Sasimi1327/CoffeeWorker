@@ -1,0 +1,58 @@
+$primary:       #ffc044;
+$secondary:     #7e6238;
+$light-brown:   #ffa00b;
+$dark-brown:    #201617;
+$coronation:    #edeceb;
+$black:         #181818;
+$white:         #ffffff;
+
+// 是否在生成通用類別樣式後方加上 !important（預設是 true）。
+$enable-important-utilities:  false !default;
+$enable-negative-margins:     true !default;
+
+$body-bg:                   $white !default;
+$body-color:                $black !default;
+
+$spacer: 1rem !default;
+
+$grid-columns:                12 !default;
+$grid-gutter-width:           1.5rem !default;
+$container-padding-x: $grid-gutter-width !default;
+
+$enable-grid-classes:         true !default;
+
+$font-size-base:              1rem !default;
+$font-size-lg:                $font-size-base * 1.25 !default;
+$h1-fz:                $font-size-base * 3.5 !default; //48px
+$h2-fz:                $font-size-base * 2 !default; //32px
+$h3-fz:                $font-size-base * 1.75 !default; //28px
+$h4-fz:                $font-size-base * 1.5 !default; //24px
+$h5-fz:                $font-size-base * 1.25 !default; //20px
+$h6-fz:                $font-size-base * 1.125 !default; //18px
+$h7-fz:                $font-size-base !default; //16px
+$h8-fz:                $font-size-base * .875 !default; //14px
+$h9-fz:                $font-size-base * .75 !default; //12px
+
+$line-height-base:            1.5 !default;
+$line-height-sm:              1.2 !default;
+
+$nav-link-padding-y:                .5rem !default;
+$nav-link-padding-x:                .5rem !default;
+$nav-link-font-weight:              500 !default;
+$nav-link-color:                    $white;
+$nav-link-hover-color:              $primary;
+$nav-link-font-size:                $font-size-lg; //$font-size-base !default;
+
+$badge-padding-y:                   4px !default;
+$badge-padding-x:                   4px !default;
+$badge-font-size:                   1rem !default;
+
+$border-color:                      $primary;
+
+$link-color:                        $black !default;
+$link-hover-color:                  $primary !default;
+
+$card-img-overlay-padding:          1.5rem !default;
+
+$enable-gradients:            true !default;
+$gradient-h: linear-gradient(180deg, rgba($white, 1), rgba($coronation, 1));

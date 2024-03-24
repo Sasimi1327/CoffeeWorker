@@ -1,0 +1,334 @@
+//position:
+$utilities: map-merge(
+  $utilities, (
+    "start": map-merge(
+      map-get( $utilities, "start"),
+      ( responsive: true),
+    )
+  )
+);
+$utilities: map-merge(
+  $utilities, (
+    "end": map-merge(
+      map-get( $utilities, "end"),
+      ( responsive: true),
+    )
+  )
+);
+$utilities: map-merge(
+  $utilities, (
+    "top": map-merge(
+      map-get( $utilities, "top"),
+      ( responsive: true),
+    )
+  )
+);
+$utilities: map-merge(
+  $utilities, (
+    "bottom": map-merge(
+      map-get( $utilities, "bottom"),
+      ( responsive: true),
+    )
+  )
+);
+$utilities: map-merge(
+  $utilities, (
+    "position": map-merge(
+      map-get($utilities, "position"),
+      ( responsive: true),
+    ),
+  )
+);
+$utilities: map-merge(
+  $utilities, (
+    "translate-middle": map-merge(
+      map-get( $utilities, "translate-middle"),
+      ( responsive: true),
+    )
+  )
+);
+
+//border:
+$utilities: map-merge(
+  $utilities, (
+    "border-start": map-merge(
+      map-get( $utilities, "border-start"),
+      ( responsive: true),
+    )
+  )
+);
+$utilities: map-merge(
+  $utilities, (
+    "border-end": map-merge(
+      map-get( $utilities, "border-end"),
+      ( responsive: true),
+    )
+  )
+);
+$utilities: map-merge(
+  $utilities, (
+    "border-top": map-merge(
+      map-get( $utilities, "border-top"),
+      ( responsive: true),
+    )
+  )
+);
+$utilities: map-merge(
+  $utilities, (
+    "border-bottom": map-merge(
+      map-get( $utilities, "border-bottom"),
+      ( responsive: true),
+    )
+  )
+);
+$utilities: map-merge(
+  $utilities, (
+    "border-color": map-merge(
+      map-get( $utilities, "border-color"),
+      ( responsive: true),
+    )
+  )
+);
+
+//margin:
+$utilities: map-merge(
+  $utilities, (
+    "margin-start": map-merge(
+      map-get( $utilities, "margin-start"),
+      (class: ml)
+    )
+  )
+);
+$utilities: map-merge(
+  $utilities, (
+    "margin-end": map-merge(
+      map-get( $utilities, "margin-end"),
+      (class: mr)
+    )
+  )
+);
+
+//padding:
+$utilities: map-merge(
+  $utilities, (
+    "padding-start": map-merge(
+      map-get( $utilities, "padding-start"),
+      (class: pl)
+    )
+  )
+);
+$utilities: map-merge(
+  $utilities, (
+    "padding-end": map-merge(
+      map-get( $utilities, "padding-end"),
+      (class: pr)
+    )
+  )
+);
+
+//font-size:
+$utilities: map-merge(
+  $utilities, (
+    "font-size": map-merge(
+      map-get( $utilities, "font-size"),
+      (class: fz)
+    )
+  )
+);
+$utilities: map-merge(
+  $utilities, (
+    "font-size": map-merge(
+      map-get($utilities, "font-size"),
+      ( responsive: true),
+    ),
+  )
+);
+$utilities: map-merge(
+  $utilities, (
+    "font-weight": map-merge(
+      map-get($utilities, "font-weight"),
+      ( responsive: true),
+    ),
+  )
+);
+$utilities: map-merge(
+  $utilities, (
+    "width": map-merge(
+      map-get($utilities, "width"),
+      ( responsive: true),
+    ),
+  )
+);
+
+//新增屬性
+$utilities: map-merge(
+  $utilities,
+  (
+    "object-fit": (
+      responsive: true,
+      property: object-fit,
+      values: (
+        contain: contain,
+        cover: cover,
+        fill: fill,
+        scale: scale-down,
+        none: none,
+      )
+    )
+  )
+);
+$utilities: map-merge(
+  $utilities,
+  (
+    "object-position": (
+      property: object-position,
+      class: object,
+      values: (
+        top: top,
+        right: right,
+        bottom: bottom,
+        left: left,
+        center: center,
+        "left-top": left top,
+        "right-top": right top,
+        "right-bottom": right bottom,
+        "left-bottom": left bottom
+      )
+    )
+  )
+);
+$utilities: map-merge(
+  $utilities,
+  (
+    "opacity": (
+      property: opacity,
+      values: (
+        0: 0,
+        25: .25,
+        50: .5,
+        75: .75,
+        100: 1,
+      )
+    ),
+  )
+);
+
+$utilities: map-merge(
+  $utilities,
+  (
+    "width": (
+      property: width,
+      class: w,
+      values: (
+        0: 0,
+        5: 5%,
+        10: 10%,
+        15: 15%,
+        20: 20%,
+        25: 25%,
+        30: 30%,
+        35: 35%,
+        40: 40%,
+        45: 45%,
+        50: 50%,
+        55: 55%,
+        60: 60%,
+        65: 65%,
+        70: 70%,
+        75: 75%,
+        80: 80%,
+        85: 85%,
+        90: 90%,
+        95: 95%,
+        100: 100%,
+        auto: auto
+      )
+    ),
+  )
+);
+
+$utilities: map-merge(
+  $utilities,
+  (
+    "color": (
+      property: color,
+      class: text,
+      values: $theme-colors
+    )
+  )
+);
+
+// background
+$utilities: map-merge(
+  $utilities,
+  (
+    "background-color": (
+      property: background-color,
+      class: bg,
+      values: $theme-colors
+    )
+  )
+);
+$utilities: map-merge(
+  $utilities,
+  (
+    "background-size": (
+      property: background-size,
+      class: bg,
+      values: auto cover contain
+    )
+  )
+);
+$utilities: map-merge(
+  $utilities,
+  (
+    "background-repeat": (
+      property: background-repeat,
+      class: bg,
+      values: (
+        repeat: repeat,
+        "no-repeat": no-repeat,
+        "repeat-x": repeat-x,
+        "repeat-y": repeat-y,
+        "repeat-round": round,
+        "repeat-space": space
+      )
+    )
+  )
+);
+$utilities: map-merge(
+  $utilities,
+  (
+    "background-position": (
+      property: background-position,
+      class: bg,
+      values: (
+        top: top,
+        right: right,
+        bottom: bottom,
+        left: left,
+        center: center,
+        "left-top": left top,
+        "right-top": right top,
+        "right-bottom": right bottom,
+        "left-bottom": left bottom
+      )
+    )
+  )
+);
+$utilities: map-merge(
+  $utilities,
+  (
+    "gradient": map-merge(
+      map-get($utilities, "gradient"),
+      (
+        values: map-merge(
+          map-get(map-get($utilities, "gradient"), "values"),
+          (
+            gradient: var($gradient-h)
+          )
+        ),
+      ),
+    ),
+  )
+);
