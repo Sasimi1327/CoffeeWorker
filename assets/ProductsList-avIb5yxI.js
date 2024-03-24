@@ -1,5 +1,5 @@
-import { S as Swal } from "./sweetalert2.all-rAJSh8h2.js";
-import { _ as _export_sfc, o as openBlock, c as createElementBlock, b as createBaseVNode, n as normalizeClass, z as withModifiers, F as Fragment, y as renderList, t as toDisplayString, r as resolveComponent, d as createVNode, f as createTextVNode } from "./index-IU5jS32T.js";
+import { S as Swal } from "./sweetalert2.all-EDrVvrnR.js";
+import { _ as _export_sfc, o as openBlock, c as createElementBlock, b as createBaseVNode, n as normalizeClass, z as withModifiers, F as Fragment, y as renderList, t as toDisplayString, r as resolveComponent, d as createVNode, f as createTextVNode } from "./index-9U_Khqeb.js";
 const _sfc_main$1 = {
   props: ["pages"],
   methods: {
@@ -65,6 +65,12 @@ function _sfc_render$1(_ctx, _cache, $props, $setup, $data, $options) {
   ]);
 }
 const PaginationComponent = /* @__PURE__ */ _export_sfc(_sfc_main$1, [["render", _sfc_render$1]]);
+const AllCoffee = "/CoffeeWorker/assets/AllCoffee-GPTIEMEv.avif";
+const Expresso = "/CoffeeWorker/assets/Expresso-wTdxPeQz.avif";
+const Americano = "/CoffeeWorker/assets/Americano-59cmnXA4.avif";
+const MilkCoffee = "/CoffeeWorker/assets/MilkCoffee-83KBPtsP.avif";
+const Chocolate = "/CoffeeWorker/assets/Chocolate-R2h0JHjf.avif";
+const Special = "/CoffeeWorker/assets/Special-_5jxCVbd.avif";
 var define_import_meta_env_default = { VITE_URL: "https://vue3-course-api.hexschool.io/v2", VITE_PATH: "sasimi2024", BASE_URL: "/CoffeeWorker/", MODE: "production", DEV: false, PROD: true, SSR: false };
 const { VITE_URL, VITE_PATH } = define_import_meta_env_default;
 const _sfc_main = {
@@ -75,12 +81,30 @@ const _sfc_main = {
     return {
       selectType: "全部商品",
       coffeeType: [
-        { AllCoffee: "全部商品" },
-        { Expresso: "濃縮咖啡" },
-        { Americano: "美式咖啡" },
-        { MilkCoffee: "牛奶咖啡" },
-        { Chocolate: "巧克力咖啡" },
-        { Special: "特調咖啡" }
+        {
+          AllCoffee: "全部商品",
+          imgSrc: AllCoffee
+        },
+        {
+          Expresso: "濃縮咖啡",
+          imgSrc: Expresso
+        },
+        {
+          Americano: "美式咖啡",
+          imgSrc: Americano
+        },
+        {
+          MilkCoffee: "牛奶咖啡",
+          imgSrc: MilkCoffee
+        },
+        {
+          Chocolate: "巧克力咖啡",
+          imgSrc: Chocolate
+        },
+        {
+          Special: "特調咖啡",
+          imgSrc: Special
+        }
       ],
       products: [],
       pages: {}
@@ -88,9 +112,7 @@ const _sfc_main = {
   },
   methods: {
     getImagePath(type) {
-      const keyName = Object.keys(type)[0];
-      const imagePath = `src/assets/coffee_type/${keyName}.avif`;
-      return imagePath;
+      return Object.keys(type)[0];
     },
     updateCategory(category) {
       this.selectType = category;
@@ -169,8 +191,9 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
             key: idx
           }, [
             createBaseVNode("div", _hoisted_7, [
+              createTextVNode(toDisplayString(type.imgPath) + " ", 1),
               createBaseVNode("img", {
-                src: $options.getImagePath(type),
+                src: type.imgSrc,
                 width: "200",
                 height: "200",
                 class: "img-thumbnail object-fit-cover"
@@ -238,7 +261,7 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
     ])
   ], 64);
 }
-const ProductsList = /* @__PURE__ */ _export_sfc(_sfc_main, [["render", _sfc_render], ["__scopeId", "data-v-c4dd4f7b"]]);
+const ProductsList = /* @__PURE__ */ _export_sfc(_sfc_main, [["render", _sfc_render], ["__scopeId", "data-v-5cee9893"]]);
 export {
   ProductsList as default
 };
