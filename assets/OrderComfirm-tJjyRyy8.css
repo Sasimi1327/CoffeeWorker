@@ -1,0 +1,7 @@
+.btnHoverStyle[data-v-d17eb7f4] {
+  transition: all 1s ease;
+}
+.btnHoverStyle[data-v-d17eb7f4]:hover {
+  color: #181818;
+  background-color: #ffa00b;
+}

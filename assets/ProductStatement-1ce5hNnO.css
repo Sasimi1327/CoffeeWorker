@@ -1,0 +1,8 @@
+.btn.active[data-v-9f79219f] {
+  background: #ffc044;
+  color: #201617;
+}
+.btn-addCart[data-v-9f79219f]:hover {
+  background: #ffa00b;
+  color: #fff;
+}

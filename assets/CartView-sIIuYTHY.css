@@ -1,0 +1,17 @@
+table[data-v-ee56924c] {
+  border: 1px solid #ffa00b;
+  border-collapse: collapse;
+}
+th[data-v-ee56924c] {
+  border-bottom: 1px solid #ffa00b;
+}
+.mb-n-1px[data-v-ee56924c] {
+  margin-bottom: -1px;
+}
+.btnHoverStyle[data-v-ee56924c] {
+  transition: all 1s ease;
+}
+.btnHoverStyle[data-v-ee56924c]:hover {
+  color: #181818;
+  background-color: #ffa00b;
+}
