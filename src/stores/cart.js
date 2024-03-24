@@ -21,15 +21,13 @@ export default defineStore('cart', {
       const url = `${VITE_URL}/api/${VITE_PATH}/cart`;
       axios.get(url)
         .then((res) => {
-          console.log('getCarts', res);
           this.carts = res.data.data.carts; // 購物車
           this.total = res.data.data.total; // 總金額
           this.final_total = res.data.data.final_total; // 總金額(含優惠券)
           this.isDiscount = this.total !== this.final_total;
           this.loading = false;
         })
-        .catch((err) => {
-          console.log('購物車列表', err);
+        .catch(() => {
           this.loading = false;
         });
     },
@@ -47,8 +45,7 @@ export default defineStore('cart', {
           this.isUpdateItem = false;
           this.loading = false;
         })
-        .catch((err) => {
-          console.log('更新購物車數量', err);
+        .catch(() => {
           this.isUpdateItem = false;
           this.loading = false;
         });
@@ -63,8 +60,7 @@ export default defineStore('cart', {
           this.isDelItem = false;
           this.loading = false;
         })
-        .catch((err) => {
-          console.log('刪除購物車品項', err);
+        .catch(() => {
           this.isDelItem = false;
           this.loading = false;
         });
@@ -82,14 +78,12 @@ export default defineStore('cart', {
         },
       };
       axios.post(url, data)
-        .then((res) => {
-          console.log('addToCart', res);
+        .then(() => {
           this.getCarts();
           this.isAddToCart = false;
           this.loading = false;
         })
-        .catch((err) => {
-          console.log('加入購物車', err);
+        .catch(() => {
           this.isAddToCart = false;
           this.loading = false;
         });

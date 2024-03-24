@@ -21,7 +21,6 @@ export default {
       const url = `${VITE_URL}/api/${VITE_PATH}/order/${id}`;
       this.$http.get(url)
         .then((res) => {
-          console.log('getOrder', res.data.order);
           this.order = res.data.order;
           // this.createAt = res.data.order.create_at;
           // this.orderId = res.data.order.id;
