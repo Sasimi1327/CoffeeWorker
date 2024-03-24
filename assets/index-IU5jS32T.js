@@ -16915,48 +16915,48 @@ function extractChangingRecords(to, from) {
 const routes = [
   {
     path: "/",
-    component: () => __vitePreload(() => import("./FrontView-RgvAFT6d.js"), true ? __vite__mapDeps([0,1,2]) : void 0),
+    component: () => __vitePreload(() => import("./FrontView-lrUxvN8p.js"), true ? __vite__mapDeps([0,1,2]) : void 0),
     children: [
       {
         path: "",
-        component: () => __vitePreload(() => import("./HomeView-zDiJPv5W.js"), true ? __vite__mapDeps([3,4,5]) : void 0)
+        component: () => __vitePreload(() => import("./HomeView-Abs_-lli.js"), true ? __vite__mapDeps([3,4,5]) : void 0)
       },
       {
         path: "brand",
-        component: () => __vitePreload(() => import("./AboutView-lLL6sRdZ.js"), true ? __vite__mapDeps([]) : void 0)
+        component: () => __vitePreload(() => import("./AboutView-jXWAYvFC.js"), true ? __vite__mapDeps([]) : void 0)
       },
       {
         path: "products",
-        component: () => __vitePreload(() => import("./ProductsList-TL4Jd95s.js"), true ? __vite__mapDeps([6,4,7]) : void 0)
+        component: () => __vitePreload(() => import("./ProductsList-6YDJvs8b.js"), true ? __vite__mapDeps([6,4,7]) : void 0)
       },
       {
         path: "product/:id",
         name: "product-statement",
-        component: () => __vitePreload(() => import("./ProductStatement-CmYdpJm9.js"), true ? __vite__mapDeps([8,4,1,9]) : void 0)
+        component: () => __vitePreload(() => import("./ProductStatement-g1vzQItF.js"), true ? __vite__mapDeps([8,4,1,9]) : void 0)
       },
       {
         path: "cart",
-        component: () => __vitePreload(() => import("./CartView-GFxSMzK5.js"), true ? __vite__mapDeps([10,4,1,11]) : void 0)
+        component: () => __vitePreload(() => import("./CartView-UOY2aPyE.js"), true ? __vite__mapDeps([10,4,1,11]) : void 0)
       },
       {
         path: "userinfo",
-        component: () => __vitePreload(() => import("./UserCart-kL0BgRkI.js"), true ? __vite__mapDeps([12,4,1]) : void 0)
+        component: () => __vitePreload(() => import("./UserCart-r71GeDWa.js"), true ? __vite__mapDeps([12,4,1]) : void 0)
       },
       {
         path: "checkout/:id",
         name: "order-detail",
-        component: () => __vitePreload(() => import("./OrderComfirm-3wl-Z1Dj.js"), true ? __vite__mapDeps([13,4,14]) : void 0)
+        component: () => __vitePreload(() => import("./OrderComfirm-QKMRF7rt.js"), true ? __vite__mapDeps([13,4,14]) : void 0)
       },
       {
         path: "complete",
         name: "pay-complete",
-        component: () => __vitePreload(() => import("./OrderComplete-1sUHzs8p.js"), true ? __vite__mapDeps([15,16]) : void 0)
+        component: () => __vitePreload(() => import("./OrderComplete-oANeGiAB.js"), true ? __vite__mapDeps([15,16]) : void 0)
       }
     ]
   },
   {
     path: "/:pathMatch(.*)*",
-    component: () => __vitePreload(() => import("./ErrorPage-BTvN9qSf.js"), true ? __vite__mapDeps([17,18]) : void 0)
+    component: () => __vitePreload(() => import("./ErrorPage-lJEVmUuI.js"), true ? __vite__mapDeps([17,18]) : void 0)
   }
 ];
 const router = createRouter({
@@ -17028,7 +17028,7 @@ export {
 };
 function __vite__mapDeps(indexes) {
   if (!__vite__mapDeps.viteFileDeps) {
-    __vite__mapDeps.viteFileDeps = ["assets/FrontView-RgvAFT6d.js","assets/cart-JpM_7EFP.js","assets/FrontView-8Ajv9ain.css","assets/HomeView-zDiJPv5W.js","assets/sweetalert2.all-49ghd-uf.js","assets/HomeView-frhpMXWc.css","assets/ProductsList-TL4Jd95s.js","assets/ProductsList-i2ya9L2C.css","assets/ProductStatement-CmYdpJm9.js","assets/ProductStatement-1ce5hNnO.css","assets/CartView-GFxSMzK5.js","assets/CartView-sIIuYTHY.css","assets/UserCart-kL0BgRkI.js","assets/OrderComfirm-3wl-Z1Dj.js","assets/OrderComfirm-tJjyRyy8.css","assets/OrderComplete-1sUHzs8p.js","assets/OrderComplete-10zjzkin.css","assets/ErrorPage-BTvN9qSf.js","assets/ErrorPage-FK1VcOjv.css"]
+    __vite__mapDeps.viteFileDeps = ["assets/FrontView-lrUxvN8p.js","assets/cart-TFs4JoLr.js","assets/FrontView-8Ajv9ain.css","assets/HomeView-Abs_-lli.js","assets/sweetalert2.all-rAJSh8h2.js","assets/HomeView-frhpMXWc.css","assets/ProductsList-6YDJvs8b.js","assets/ProductsList-i2ya9L2C.css","assets/ProductStatement-g1vzQItF.js","assets/ProductStatement-1ce5hNnO.css","assets/CartView-UOY2aPyE.js","assets/CartView-sIIuYTHY.css","assets/UserCart-r71GeDWa.js","assets/OrderComfirm-QKMRF7rt.js","assets/OrderComfirm-8CCpS_d5.css","assets/OrderComplete-oANeGiAB.js","assets/OrderComplete-10zjzkin.css","assets/ErrorPage-lJEVmUuI.js","assets/ErrorPage-FK1VcOjv.css"]
   }
   return indexes.map((i) => __vite__mapDeps.viteFileDeps[i])
 }

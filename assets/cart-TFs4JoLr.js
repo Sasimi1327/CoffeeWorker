@@ -1,4 +1,4 @@
-import { G as defineStore, H as axios } from "./index-r2yGqD65.js";
+import { G as defineStore, H as axios } from "./index-IU5jS32T.js";
 var define_import_meta_env_default = { VITE_URL: "https://vue3-course-api.hexschool.io/v2", VITE_PATH: "sasimi2024", BASE_URL: "/CoffeeWorker/", MODE: "production", DEV: false, PROD: true, SSR: false };
 const { VITE_URL, VITE_PATH } = define_import_meta_env_default;
 const cartStore = defineStore("cart", {
@@ -18,14 +18,12 @@ const cartStore = defineStore("cart", {
       this.loading = true;
       const url = `${VITE_URL}/api/${VITE_PATH}/cart`;
       axios.get(url).then((res) => {
-        console.log("getCarts", res);
         this.carts = res.data.data.carts;
         this.total = res.data.data.total;
         this.final_total = res.data.data.final_total;
         this.isDiscount = this.total !== this.final_total;
         this.loading = false;
-      }).catch((err) => {
-        console.log("購物車列表", err);
+      }).catch(() => {
         this.loading = false;
       });
     },
@@ -41,8 +39,7 @@ const cartStore = defineStore("cart", {
         this.getCarts();
         this.isUpdateItem = false;
         this.loading = false;
-      }).catch((err) => {
-        console.log("更新購物車數量", err);
+      }).catch(() => {
         this.isUpdateItem = false;
         this.loading = false;
       });
@@ -55,8 +52,7 @@ const cartStore = defineStore("cart", {
         this.getCarts();
         this.isDelItem = false;
         this.loading = false;
-      }).catch((err) => {
-        console.log("刪除購物車品項", err);
+      }).catch(() => {
         this.isDelItem = false;
         this.loading = false;
       });
@@ -73,13 +69,11 @@ const cartStore = defineStore("cart", {
           ice
         }
       };
-      axios.post(url, data).then((res) => {
-        console.log("addToCart", res);
+      axios.post(url, data).then(() => {
         this.getCarts();
         this.isAddToCart = false;
         this.loading = false;
-      }).catch((err) => {
-        console.log("加入購物車", err);
+      }).catch(() => {
         this.isAddToCart = false;
         this.loading = false;
       });

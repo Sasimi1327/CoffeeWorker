@@ -1,4 +1,4 @@
-import { _ as _export_sfc, o as openBlock, c as createElementBlock, e as createStaticVNode } from "./index-r2yGqD65.js";
+import { _ as _export_sfc, o as openBlock, c as createElementBlock, e as createStaticVNode } from "./index-IU5jS32T.js";
 const _imports_0 = "/CoffeeWorker/assets/BrandStory-yy7lzZgr.avif";
 const _sfc_main = {};
 const _hoisted_1 = { class: "container my-10 my-md-20" };
