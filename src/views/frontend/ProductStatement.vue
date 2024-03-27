@@ -14,18 +14,23 @@ export default {
       selectSugar: '標準甜',
       selectIce: '正常冰',
       qty: 1,
+      suggestProducts: [],
+      suggestProductsShuffle: [],
     };
   },
   methods: {
     ...mapActions(cartStore, ['addToCart']),
     getProduct() {
+      this.isLoading = true;
       const { id } = this.$route.params;
       const url = `${VITE_URL}/api/${VITE_PATH}/product/${id}`;
       this.$http.get(url)
         .then((res) => {
           this.selectProduct = res.data.product;
+          this.isLoading = false;
         })
         .catch((err) => {
+          this.isLoading = false;
           Swal.fire({
             toast: true,
             position: 'top-end',
@@ -35,6 +40,36 @@ export default {
             timer: 2000,
           });
         });
+    },
+    getSuggestProducts() {
+      this.isLoading = true;
+      const { id } = this.$route.params;
+      const url = `${VITE_URL}/api/${VITE_PATH}/products/all`;
+      this.$http.get(url)
+        .then((res) => {
+          this.suggestProducts = res.data.products;
+          this.isLoading = false;
+          this.suggestProductsShuffle = this.shuffledArray(
+            this.suggestProducts.filter((item) => item.id !== id),
+          );
+        })
+        .catch((err) => {
+          this.isLoading = false;
+          Swal.fire({
+            position: 'top-end',
+            icon: 'error',
+            title: err.response.data.message,
+            showConfirmButton: false,
+            timer: 1500,
+          });
+        });
+    },
+    shuffledArray(array) {
+      const shuffled = array.slice().sort(() => 0.5 - Math.random());
+      return shuffled.slice(0, 4);
+    },
+    productStatement(id) {
+      this.$router.push({ path: `/product/${id}` });
     },
   },
   watch: {
@@ -51,6 +86,14 @@ export default {
         });
       }
     },
+    // 當商品明細的網址變動時
+    $route() {
+      this.selectSugar = '標準甜';
+      this.selectIce = '正常冰';
+      this.qty = 1;
+      this.getProduct();
+      this.getSuggestProducts();
+    },
     loading() {
       this.isLoading = this.loading;
     },
@@ -60,6 +103,7 @@ export default {
   },
   mounted() {
     this.getProduct();
+    this.getSuggestProducts();
   },
 };
 </script>
@@ -229,8 +273,48 @@ export default {
       </div>
     </div>
   </div>
-  <div class="container-fluid ">
-
+  <div class="container-fluid py-10 py-md-20 bg-coronation">
+    <div class="container text-center">
+      <div class="text-center mb-6">
+        <h2 class="fz-2 lh-sm fw-normal">你可能也會喜歡...</h2>
+      </div>
+      <div class="row">
+        <div class="col-md-6 col-lg-3 mb-8"
+          v-for="product in suggestProductsShuffle" :key="product.id">
+          <div class="card h-100">
+            <div class="card-img-container">
+              <img :src="product.imageUrl" class="card-img-top productImg" :alt="product.id">
+            </div>
+            <div class="card-body text-start">
+              <h5 class="card-title fz-7 lh-base fw-bold">{{ product.title }}</h5>
+              <p class="card-text">
+                <span v-if="product.price === product.origin_price">
+                  NT$
+                  <ins class="text-decoration-none">
+                    <span class="text-muted fw-bold fz-4 ">{{ product.price }}</span>
+                  </ins>
+                </span>
+                <span v-else>
+                  NT$
+                  <s class="mr-1">
+                    <span class="text-muted fw-normal fz-6 lh-1">{{ product.origin_price }}</span>
+                  </s>
+                  <ins class="text-decoration-none">
+                    <span class="text-primary fz-4 ">{{ product.price }}</span>
+                  </ins>
+                </span>
+              </p>
+            </div>
+            <div class="card-footer border-0 bg-white text-end">
+              <button type="button"
+              @click.prevent="productStatement(`${product.id}`)"
+              class="w-100 btn btn-primary stretched-link
+              mb-5 py-3 text-white fz-6 fw-bold">商品明細</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
