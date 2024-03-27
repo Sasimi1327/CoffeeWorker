@@ -1,6 +1,6 @@
-import { S as Swal } from "./sweetalert2.all-EDrVvrnR.js";
-import { c as cartStore } from "./cart-qzARS_fk.js";
-import { _ as _export_sfc, m as mapActions, a as mapState, r as resolveComponent, o as openBlock, c as createElementBlock, d as createVNode, b as createBaseVNode, t as toDisplayString, f as createTextVNode, B as withDirectives, C as vModelRadio, n as normalizeClass, D as vModelText, F as Fragment, p as pushScopeId, g as popScopeId } from "./index-9U_Khqeb.js";
+import { S as Swal } from "./sweetalert2.all-y40DOsxL.js";
+import { c as cartStore } from "./cart-OGkI5jP5.js";
+import { _ as _export_sfc, m as mapActions, a as mapState, r as resolveComponent, o as openBlock, c as createElementBlock, d as createVNode, b as createBaseVNode, t as toDisplayString, f as createTextVNode, B as withDirectives, C as vModelRadio, n as normalizeClass, D as vModelText, F as Fragment, y as renderList, z as withModifiers, p as pushScopeId, g as popScopeId } from "./index-Y8Vdyrzx.js";
 var define_import_meta_env_default = { VITE_URL: "https://vue3-course-api.hexschool.io/v2", VITE_PATH: "sasimi2024", BASE_URL: "/CoffeeWorker/", MODE: "production", DEV: false, PROD: true, SSR: false };
 const { VITE_URL, VITE_PATH } = define_import_meta_env_default;
 const _sfc_main = {
@@ -10,17 +10,22 @@ const _sfc_main = {
       selectProduct: {},
       selectSugar: "標準甜",
       selectIce: "正常冰",
-      qty: 1
+      qty: 1,
+      suggestProducts: [],
+      suggestProductsShuffle: []
     };
   },
   methods: {
     ...mapActions(cartStore, ["addToCart"]),
     getProduct() {
+      this.isLoading = true;
       const { id } = this.$route.params;
       const url = `${VITE_URL}/api/${VITE_PATH}/product/${id}`;
       this.$http.get(url).then((res) => {
         this.selectProduct = res.data.product;
+        this.isLoading = false;
       }).catch((err) => {
+        this.isLoading = false;
         Swal.fire({
           toast: true,
           position: "top-end",
@@ -30,6 +35,34 @@ const _sfc_main = {
           timer: 2e3
         });
       });
+    },
+    getSuggestProducts() {
+      this.isLoading = true;
+      const { id } = this.$route.params;
+      const url = `${VITE_URL}/api/${VITE_PATH}/products/all`;
+      this.$http.get(url).then((res) => {
+        this.suggestProducts = res.data.products;
+        this.isLoading = false;
+        this.suggestProductsShuffle = this.shuffledArray(
+          this.suggestProducts.filter((item) => item.id !== id)
+        );
+      }).catch((err) => {
+        this.isLoading = false;
+        Swal.fire({
+          position: "top-end",
+          icon: "error",
+          title: err.response.data.message,
+          showConfirmButton: false,
+          timer: 1500
+        });
+      });
+    },
+    shuffledArray(array) {
+      const shuffled = array.slice().sort(() => 0.5 - Math.random());
+      return shuffled.slice(0, 4);
+    },
+    productStatement(id) {
+      this.$router.push({ path: `/product/${id}` });
     }
   },
   watch: {
@@ -46,6 +79,14 @@ const _sfc_main = {
         });
       }
     },
+    // 當商品明細的網址變動時
+    $route() {
+      this.selectSugar = "標準甜";
+      this.selectIce = "正常冰";
+      this.qty = 1;
+      this.getProduct();
+      this.getSuggestProducts();
+    },
     loading() {
       this.isLoading = this.loading;
     }
@@ -55,9 +96,10 @@ const _sfc_main = {
   },
   mounted() {
     this.getProduct();
+    this.getSuggestProducts();
   }
 };
-const _withScopeId = (n) => (pushScopeId("data-v-9f79219f"), n = n(), popScopeId(), n);
+const _withScopeId = (n) => (pushScopeId("data-v-72cd202c"), n = n(), popScopeId(), n);
 const _hoisted_1 = { class: "container py-20 mb-6" };
 const _hoisted_2 = { class: "row" };
 const _hoisted_3 = { class: "col-lg-5" };
@@ -114,7 +156,28 @@ const _hoisted_39 = [
   _hoisted_38
 ];
 const _hoisted_40 = { class: "mb-3 position-relative" };
-const _hoisted_41 = /* @__PURE__ */ _withScopeId(() => /* @__PURE__ */ createBaseVNode("div", { class: "container-fluid" }, null, -1));
+const _hoisted_41 = { class: "container-fluid py-10 py-md-20 bg-coronation" };
+const _hoisted_42 = { class: "container text-center" };
+const _hoisted_43 = /* @__PURE__ */ _withScopeId(() => /* @__PURE__ */ createBaseVNode("div", { class: "text-center mb-6" }, [
+  /* @__PURE__ */ createBaseVNode("h2", { class: "fz-2 lh-sm fw-normal" }, "你可能也會喜歡...")
+], -1));
+const _hoisted_44 = { class: "row" };
+const _hoisted_45 = { class: "card h-100" };
+const _hoisted_46 = { class: "card-img-container" };
+const _hoisted_47 = ["src", "alt"];
+const _hoisted_48 = { class: "card-body text-start" };
+const _hoisted_49 = { class: "card-title fz-7 lh-base fw-bold" };
+const _hoisted_50 = { class: "card-text" };
+const _hoisted_51 = { key: 0 };
+const _hoisted_52 = { class: "text-decoration-none" };
+const _hoisted_53 = { class: "text-muted fw-bold fz-4" };
+const _hoisted_54 = { key: 1 };
+const _hoisted_55 = { class: "mr-1" };
+const _hoisted_56 = { class: "text-muted fw-normal fz-6 lh-1" };
+const _hoisted_57 = { class: "text-decoration-none" };
+const _hoisted_58 = { class: "text-primary fz-4" };
+const _hoisted_59 = { class: "card-footer border-0 bg-white text-end" };
+const _hoisted_60 = ["onClick"];
 function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_VueLoading = resolveComponent("VueLoading");
   return openBlock(), createElementBlock(Fragment, null, [
@@ -381,10 +444,58 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
         ])
       ])
     ]),
-    _hoisted_41
+    createBaseVNode("div", _hoisted_41, [
+      createBaseVNode("div", _hoisted_42, [
+        _hoisted_43,
+        createBaseVNode("div", _hoisted_44, [
+          (openBlock(true), createElementBlock(Fragment, null, renderList($data.suggestProductsShuffle, (product) => {
+            return openBlock(), createElementBlock("div", {
+              class: "col-md-6 col-lg-3 mb-8",
+              key: product.id
+            }, [
+              createBaseVNode("div", _hoisted_45, [
+                createBaseVNode("div", _hoisted_46, [
+                  createBaseVNode("img", {
+                    src: product.imageUrl,
+                    class: "card-img-top productImg",
+                    alt: product.id
+                  }, null, 8, _hoisted_47)
+                ]),
+                createBaseVNode("div", _hoisted_48, [
+                  createBaseVNode("h5", _hoisted_49, toDisplayString(product.title), 1),
+                  createBaseVNode("p", _hoisted_50, [
+                    product.price === product.origin_price ? (openBlock(), createElementBlock("span", _hoisted_51, [
+                      createTextVNode(" NT$ "),
+                      createBaseVNode("ins", _hoisted_52, [
+                        createBaseVNode("span", _hoisted_53, toDisplayString(product.price), 1)
+                      ])
+                    ])) : (openBlock(), createElementBlock("span", _hoisted_54, [
+                      createTextVNode(" NT$ "),
+                      createBaseVNode("s", _hoisted_55, [
+                        createBaseVNode("span", _hoisted_56, toDisplayString(product.origin_price), 1)
+                      ]),
+                      createBaseVNode("ins", _hoisted_57, [
+                        createBaseVNode("span", _hoisted_58, toDisplayString(product.price), 1)
+                      ])
+                    ]))
+                  ])
+                ]),
+                createBaseVNode("div", _hoisted_59, [
+                  createBaseVNode("button", {
+                    type: "button",
+                    onClick: withModifiers(($event) => $options.productStatement(`${product.id}`), ["prevent"]),
+                    class: "w-100 btn btn-primary stretched-link mb-5 py-3 text-white fz-6 fw-bold"
+                  }, "商品明細", 8, _hoisted_60)
+                ])
+              ])
+            ]);
+          }), 128))
+        ])
+      ])
+    ])
   ], 64);
 }
-const ProductStatement = /* @__PURE__ */ _export_sfc(_sfc_main, [["render", _sfc_render], ["__scopeId", "data-v-9f79219f"]]);
+const ProductStatement = /* @__PURE__ */ _export_sfc(_sfc_main, [["render", _sfc_render], ["__scopeId", "data-v-72cd202c"]]);
 export {
   ProductStatement as default
 };
