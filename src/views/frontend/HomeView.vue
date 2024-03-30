@@ -1,6 +1,7 @@
 <template>
   <div class="container-fluid position-relative text-center overflow-hidden">
-    <img src="../../assets/banner.avif" class="img-fluid w-100 mh-100 object-fit-cover">
+    <img src="@/assets/banner.avif" alt="banner"
+      class="img-fluid w-100 mh-100 object-fit-cover">
     <div class="row">
       <div class="col-12 position-absolute top-30 start-70 translate-middle">
         <h2 class="fz-1 text-primary">
@@ -24,9 +25,9 @@
     <div class="row pb-8">
       <div class="col-12 col-md-6 col-lg-3"
         v-for="product in newProductShuffle" :key="product.id">
-        <div class="card text-center">
+        <div class="card text-center mb-8 mb-lg-0">
           <div class="card-img-container">
-            <img :src="product.imageUrl" class="card-img-top">
+            <img :src="product.imageUrl" class="card-img-top" alt="product.id">
           </div>
           <div class="card-body">
             <h5 class="card-title mb-6 fz-6
@@ -146,7 +147,6 @@
 
       <div class="d-md-none">
         <swiper :pagination="true"
-                :loop="true"
                 :autoplay="{ delay: 4000 }"
                 :modules="modules"
                 class="mySwiper">
@@ -175,22 +175,16 @@
 
 <script>
 // import required modules
-// eslint-disable-next-line import/no-extraneous-dependencies
 import { Pagination, Autoplay } from 'swiper/modules';
 
 // Import Swiper Vue.js components
-// eslint-disable-next-line import/no-extraneous-dependencies
 import { Swiper, SwiperSlide } from 'swiper/vue';
 
 // Import Swiper styles
-// eslint-disable-next-line import/no-extraneous-dependencies
 import 'swiper/css';
-// eslint-disable-next-line import/no-extraneous-dependencies
 import 'swiper/css/pagination';
-// eslint-disable-next-line import/no-extraneous-dependencies
 import 'swiper/css/autoplay';
 
-// eslint-disable-next-line import/no-extraneous-dependencies
 import Swal from 'sweetalert2';
 
 const { VITE_URL, VITE_PATH } = import.meta.env;

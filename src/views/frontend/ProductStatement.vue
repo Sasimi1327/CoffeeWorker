@@ -109,18 +109,18 @@ export default {
 </script>
 
 <template>
-  <VueLoading v-model:active="isLoading"></VueLoading>
+  <VueLoading v-model:active="isLoading" />
   <div class="container py-20 mb-6">
     <div class="row">
       <div class="col-lg-5">
         <div class="pt-15">
-          <img :src="selectProduct.imageUrl"
+          <img :src="selectProduct.imageUrl" :alt="selectProduct.id"
           class="img-fluid object-fit-cover">
         </div>
       </div>
       <div class="col-lg-7">
-        <div class="position-relative ml-18">
-          <h3 class="fz-3 text-primary">{{ selectProduct.title }}</h3>
+        <div class="position-relative ml-lg-18">
+          <h3 class="mt-8 fz-3 text-primary">{{ selectProduct.title }}</h3>
           <div class="my-7 fz-5">
             {{ selectProduct.description }}
           </div>

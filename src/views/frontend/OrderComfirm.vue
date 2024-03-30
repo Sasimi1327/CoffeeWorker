@@ -6,13 +6,6 @@ export default {
   data() {
     return {
       order: {},
-      // createAt: '',
-      // orderId: '',
-      // is_paid: false,
-      // products: [],
-      // total: 0,
-      // user: {},
-      // msg: '',
     };
   },
   methods: {
@@ -22,13 +15,6 @@ export default {
       this.$http.get(url)
         .then((res) => {
           this.order = res.data.order;
-          // this.createAt = res.data.order.create_at;
-          // this.orderId = res.data.order.id;
-          // this.products = res.data.order.products;
-          // this.total = res.data.order.total;
-          // this.user = res.data.order.user;
-          // this.msg = res.data.order?.message;
-          // this.is_paid = res.data.order.is_paid;
         })
         .catch((err) => {
           Swal.fire({

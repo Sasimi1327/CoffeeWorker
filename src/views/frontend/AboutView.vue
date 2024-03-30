@@ -26,7 +26,7 @@
         </p>
       </div>
       <div class="col-md-6" style="height: 100vh - 150px;">
-        <img src="../../assets/BrandStory.avif"
+        <img src="@/assets/BrandStory.avif" alt="brand-picture"
         class="img-fluid object-fit-cover object-center opacity-75 h-100">
       </div>
     </div>

@@ -3,19 +3,14 @@ import { createPinia } from 'pinia';
 
 // axios
 import axios from 'axios';
-// eslint-disable-next-line import/no-extraneous-dependencies
 import VueAxios from 'vue-axios';
-// eslint-disable-next-line import/no-extraneous-dependencies
 import Loading from 'vue-loading-overlay';
 
 import { date, currency } from '@/methods/filters';
 
 // Vue Validate
-// eslint-disable-next-line import/no-extraneous-dependencies
 import * as VeeValidate from 'vee-validate';
-// eslint-disable-next-line import/no-extraneous-dependencies
 import VeeValidateRules from '@vee-validate/rules';
-// eslint-disable-next-line import/no-extraneous-dependencies
 import * as VeeValidateI18n from '@vee-validate/i18n';
 import zhTW from './i18n/zh_TW.json';
 

@@ -100,7 +100,7 @@ export default {
         <div class="card d-flex justify-content-center align-items-center border-0">
             {{ type.imgPath }}
           <img :src="type.imgSrc" width="200" height="200"
-            class="img-thumbnail object-fit-cover">
+            class="img-thumbnail object-fit-cover" :alt="Object.values(type)[0]">
           <div class="card-body">
             <a class="btn text-light-brown stretched-link fz-5"
               @click="updateCategory(Object.values(type)[0])"
@@ -152,7 +152,7 @@ export default {
     <PaginationComponent
       :pages="pages"
       @emit-pages="getProducts"
-    ></PaginationComponent>
+    />
   </div>
 </template>
 

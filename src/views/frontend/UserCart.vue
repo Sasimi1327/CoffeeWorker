@@ -93,7 +93,7 @@ export default {
 </script>
 
 <template>
-  <VueLoading v-model:active="isLoading"></VueLoading>
+  <VueLoading v-model:active="isLoading" />
   <div class="container my-10 my-md-20">
     <div class="d-flex justify-content-between align-items-center py-4">
       <h3>填寫顧客資訊</h3>
@@ -215,7 +215,3 @@ export default {
 
   </div>
 </template>
-
-<style lang='scss'>
-
-</style>

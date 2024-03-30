@@ -143,7 +143,7 @@ export default {
             title="Instagram"
           >
             <a href="https://www.instagram.com/" class="lh-base" target="_blank">
-              <img src="../assets/social_icons/ic_ig.svg" alt="ig">
+              <img src="@/assets/social_icons/ic_ig.svg" alt="ig">
             </a>
           </li>
           <li class="social-item rounded-circle p-2 mx-2 d-flex align-items-center"
@@ -152,7 +152,7 @@ export default {
             title="Facebook"
           >
             <a href="https://zh-tw.facebook.com/" class="social-link" target="_blank">
-              <img src="../assets/social_icons/ic_fb.svg" alt="fb">
+              <img src="@/assets/social_icons/ic_fb.svg" alt="fb">
             </a>
           </li>
           <li class="social-item rounded-circle p-2 mx-2 d-flex align-items-center"
@@ -161,7 +161,7 @@ export default {
             title="Line"
           >
             <a href="https://line.me/zh-hant/" class="social-link" target="_blank">
-              <img src="../assets/social_icons/ic_line.svg" alt="line">
+              <img src="@/assets/social_icons/ic_line.svg" alt="line">
             </a>
           </li>
           <li class="social-item rounded-circle p-2 mx-2 d-flex align-items-center"
@@ -170,7 +170,7 @@ export default {
             title="Youtube"
           >
             <a href="https://www.youtube.com/" class="social-link" target="_blank">
-              <img src="../assets/social_icons/ic_yt.svg" alt="yt">
+              <img src="@/assets/social_icons/ic_yt.svg" alt="yt">
             </a>
           </li>
         </ul>
@@ -224,11 +224,15 @@ export default {
         <ul class="row flex-column list-unstyled text-white">
           <li class="offset-1 col-11 mb-5 align-middle fz-6">
             <div class="material-symbols-outlined py-1 mr-3 d-inline-flex align-bottom">call</div>
-            (02) 2811 - 5486
+            <a href="tel:+886-2-8115486" class="text-white text-decoration-none">
+              (02) 2811 - 5486
+            </a>
           </li>
           <li class="offset-1 col-11 mb-5 align-middle fz-6">
             <span class="material-symbols-outlined py-1 mr-3 d-inline-flex align-bottom">mail</span>
-            coffeeworker@gmail.com
+            <a href="mailto:CoffeeWorker@gmail.com" class="text-white text-decoration-none">
+              CoffeeWorker@gmail.com
+            </a>
           </li>
           <li class="offset-1 col-11 align-middle fz-6">
             <span class="material-symbols-outlined py-1 mr-3 d-inline-flex align-bottom">home</span>

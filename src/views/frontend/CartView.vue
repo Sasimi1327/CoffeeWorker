@@ -12,6 +12,22 @@ export default {
   },
   methods: {
     ...mapActions(cartStore, ['updateCartItem', 'deleteCartItem']),
+    checkBeforeRemove(item) {
+      Swal.fire({
+        title: '刪除產品確認',
+        text: `是否刪除 【${item.product.title ? item.product.title : item.id}】 (刪除後將無法恢復)`,
+        icon: 'warning',
+        showCancelButton: true,
+        cancelButtonColor: '#d33',
+        confirmButtonColor: '#3085d6',
+        cancelButtonText: '取消刪除',
+        confirmButtonText: '確認刪除',
+      }).then((result) => {
+        if (result.isConfirmed) {
+          this.deleteCartItem(item);
+        }
+      });
+    },
   },
   computed: {
     ...mapState(cartStore, ['carts', 'total', 'final_total', 'loading', 'isUpdateItem', 'isDelItem']),
@@ -49,7 +65,7 @@ export default {
 </script>
 
 <template>
-  <VueLoading v-model:active="isLoading"></VueLoading>
+  <VueLoading v-model:active="isLoading" />
   <div class="container my-10 my-md-20">
     <div class="d-flex justify-content-between align-items-center py-4">
       <h3>您的購物車列表</h3>
@@ -75,7 +91,7 @@ export default {
         <tbody>
           <tr v-for="item in carts" :key="item.id">
             <td class="w-25">
-              <img :src="item.product.imageUrl"
+              <img :src="item.product.imageUrl" alt="item.id"
                 class="img-thumbnail w-100 h-100 object-fit-cover" >
             </td>
             <td class="w-30 p-4 text-start">
@@ -90,7 +106,7 @@ export default {
                   <button type="button" class="bg-white border-black"
                     @click=" item.qty > 1 ?
                             (item.qty--, updateCartItem(item)) :
-                            deleteCartItem(item)">
+                            checkBeforeRemove(item)">
                     <span v-if="item.qty > 1" class="material-symbols-outlined
                       my-1 align-middle">remove</span>
                     <span v-else class="material-symbols-outlined my-1 align-middle">delete</span>
@@ -131,7 +147,7 @@ export default {
               <button type="button" class="bg-white border-black"
                 @click=" item.qty > 1 ?
                         (item.qty--, updateCartItem(item)) :
-                        deleteCartItem(item)">
+                        checkBeforeRemove(item)">
                 <span v-if="item.qty > 1" class="material-symbols-outlined
                   my-1 align-middle">remove</span>
                 <span v-else class="material-symbols-outlined my-1 align-middle">delete</span>
