@@ -1,6 +1,6 @@
-import { S as Swal } from "./sweetalert2.all-y40DOsxL.js";
-import { c as cartStore } from "./cart-OGkI5jP5.js";
-import { _ as _export_sfc, m as mapActions, a as mapState, r as resolveComponent, o as openBlock, c as createElementBlock, d as createVNode, b as createBaseVNode, w as withCtx, F as Fragment, y as renderList, f as createTextVNode, t as toDisplayString, E as createCommentVNode, B as withDirectives, D as vModelText, p as pushScopeId, g as popScopeId } from "./index-Y8Vdyrzx.js";
+import { S as Swal } from "./sweetalert2.all--pEj7bp4.js";
+import { c as cartStore } from "./cart-8NMC2yye.js";
+import { _ as _export_sfc, m as mapActions, a as mapState, r as resolveComponent, o as openBlock, c as createElementBlock, d as createVNode, b as createBaseVNode, w as withCtx, F as Fragment, y as renderList, f as createTextVNode, t as toDisplayString, E as createCommentVNode, B as withDirectives, D as vModelText, p as pushScopeId, g as popScopeId } from "./index-uFz9gIqX.js";
 const _sfc_main = {
   data() {
     return {
@@ -8,7 +8,23 @@ const _sfc_main = {
     };
   },
   methods: {
-    ...mapActions(cartStore, ["updateCartItem", "deleteCartItem"])
+    ...mapActions(cartStore, ["updateCartItem", "deleteCartItem"]),
+    checkBeforeRemove(item) {
+      Swal.fire({
+        title: "刪除產品確認",
+        text: `是否刪除 【${item.product.title ? item.product.title : item.id}】 (刪除後將無法恢復)`,
+        icon: "warning",
+        showCancelButton: true,
+        cancelButtonColor: "#d33",
+        confirmButtonColor: "#3085d6",
+        cancelButtonText: "取消刪除",
+        confirmButtonText: "確認刪除"
+      }).then((result) => {
+        if (result.isConfirmed) {
+          this.deleteCartItem(item);
+        }
+      });
+    }
   },
   computed: {
     ...mapState(cartStore, ["carts", "total", "final_total", "loading", "isUpdateItem", "isDelItem"])
@@ -43,7 +59,7 @@ const _sfc_main = {
     }
   }
 };
-const _withScopeId = (n) => (pushScopeId("data-v-ee56924c"), n = n(), popScopeId(), n);
+const _withScopeId = (n) => (pushScopeId("data-v-a0c15063"), n = n(), popScopeId(), n);
 const _hoisted_1 = { class: "container my-10 my-md-20" };
 const _hoisted_2 = { class: "d-flex justify-content-between align-items-center py-4" };
 const _hoisted_3 = /* @__PURE__ */ _withScopeId(() => /* @__PURE__ */ createBaseVNode("h3", null, "您的購物車列表", -1));
@@ -172,6 +188,7 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
                 createBaseVNode("td", _hoisted_8, [
                   createBaseVNode("img", {
                     src: item.product.imageUrl,
+                    alt: "item.id",
                     class: "img-thumbnail w-100 h-100 object-fit-cover"
                   }, null, 8, _hoisted_9)
                 ]),
@@ -187,7 +204,7 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
                       createBaseVNode("button", {
                         type: "button",
                         class: "bg-white border-black",
-                        onClick: ($event) => item.qty > 1 ? (item.qty--, _ctx.updateCartItem(item)) : _ctx.deleteCartItem(item)
+                        onClick: ($event) => item.qty > 1 ? (item.qty--, _ctx.updateCartItem(item)) : $options.checkBeforeRemove(item)
                       }, [
                         item.qty > 1 ? (openBlock(), createElementBlock("span", _hoisted_15, "remove")) : (openBlock(), createElementBlock("span", _hoisted_16, "delete"))
                       ], 8, _hoisted_14),
@@ -241,7 +258,7 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
                   createBaseVNode("button", {
                     type: "button",
                     class: "bg-white border-black",
-                    onClick: ($event) => item.qty > 1 ? (item.qty--, _ctx.updateCartItem(item)) : _ctx.deleteCartItem(item)
+                    onClick: ($event) => item.qty > 1 ? (item.qty--, _ctx.updateCartItem(item)) : $options.checkBeforeRemove(item)
                   }, [
                     item.qty > 1 ? (openBlock(), createElementBlock("span", _hoisted_30, "remove")) : (openBlock(), createElementBlock("span", _hoisted_31, "delete"))
                   ], 8, _hoisted_29),
@@ -300,7 +317,7 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
     ])
   ], 64);
 }
-const CartView = /* @__PURE__ */ _export_sfc(_sfc_main, [["render", _sfc_render], ["__scopeId", "data-v-ee56924c"]]);
+const CartView = /* @__PURE__ */ _export_sfc(_sfc_main, [["render", _sfc_render], ["__scopeId", "data-v-a0c15063"]]);
 export {
   CartView as default
 };

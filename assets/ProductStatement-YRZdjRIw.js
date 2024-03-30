@@ -1,6 +1,6 @@
-import { S as Swal } from "./sweetalert2.all-y40DOsxL.js";
-import { c as cartStore } from "./cart-OGkI5jP5.js";
-import { _ as _export_sfc, m as mapActions, a as mapState, r as resolveComponent, o as openBlock, c as createElementBlock, d as createVNode, b as createBaseVNode, t as toDisplayString, f as createTextVNode, B as withDirectives, C as vModelRadio, n as normalizeClass, D as vModelText, F as Fragment, y as renderList, z as withModifiers, p as pushScopeId, g as popScopeId } from "./index-Y8Vdyrzx.js";
+import { S as Swal } from "./sweetalert2.all--pEj7bp4.js";
+import { c as cartStore } from "./cart-8NMC2yye.js";
+import { _ as _export_sfc, m as mapActions, a as mapState, r as resolveComponent, o as openBlock, c as createElementBlock, d as createVNode, b as createBaseVNode, t as toDisplayString, f as createTextVNode, B as withDirectives, C as vModelRadio, n as normalizeClass, D as vModelText, F as Fragment, y as renderList, z as withModifiers, p as pushScopeId, g as popScopeId } from "./index-uFz9gIqX.js";
 var define_import_meta_env_default = { VITE_URL: "https://vue3-course-api.hexschool.io/v2", VITE_PATH: "sasimi2024", BASE_URL: "/CoffeeWorker/", MODE: "production", DEV: false, PROD: true, SSR: false };
 const { VITE_URL, VITE_PATH } = define_import_meta_env_default;
 const _sfc_main = {
@@ -99,15 +99,15 @@ const _sfc_main = {
     this.getSuggestProducts();
   }
 };
-const _withScopeId = (n) => (pushScopeId("data-v-72cd202c"), n = n(), popScopeId(), n);
+const _withScopeId = (n) => (pushScopeId("data-v-aa0f4c79"), n = n(), popScopeId(), n);
 const _hoisted_1 = { class: "container py-20 mb-6" };
 const _hoisted_2 = { class: "row" };
 const _hoisted_3 = { class: "col-lg-5" };
 const _hoisted_4 = { class: "pt-15" };
-const _hoisted_5 = ["src"];
+const _hoisted_5 = ["src", "alt"];
 const _hoisted_6 = { class: "col-lg-7" };
-const _hoisted_7 = { class: "position-relative ml-18" };
-const _hoisted_8 = { class: "fz-3 text-primary" };
+const _hoisted_7 = { class: "position-relative ml-lg-18" };
+const _hoisted_8 = { class: "mt-8 fz-3 text-primary" };
 const _hoisted_9 = { class: "my-7 fz-5" };
 const _hoisted_10 = { class: "text-primary mt-4 mb-6" };
 const _hoisted_11 = {
@@ -191,6 +191,7 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
           createBaseVNode("div", _hoisted_4, [
             createBaseVNode("img", {
               src: $data.selectProduct.imageUrl,
+              alt: $data.selectProduct.id,
               class: "img-fluid object-fit-cover"
             }, null, 8, _hoisted_5)
           ])
@@ -495,7 +496,7 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
     ])
   ], 64);
 }
-const ProductStatement = /* @__PURE__ */ _export_sfc(_sfc_main, [["render", _sfc_render], ["__scopeId", "data-v-72cd202c"]]);
+const ProductStatement = /* @__PURE__ */ _export_sfc(_sfc_main, [["render", _sfc_render], ["__scopeId", "data-v-aa0f4c79"]]);
 export {
   ProductStatement as default
 };

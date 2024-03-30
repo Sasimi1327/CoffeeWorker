@@ -1,5 +1,5 @@
-import { S as Swal } from "./sweetalert2.all-y40DOsxL.js";
-import { _ as _export_sfc, o as openBlock, c as createElementBlock, b as createBaseVNode, n as normalizeClass, z as withModifiers, F as Fragment, y as renderList, t as toDisplayString, r as resolveComponent, d as createVNode, f as createTextVNode } from "./index-Y8Vdyrzx.js";
+import { S as Swal } from "./sweetalert2.all--pEj7bp4.js";
+import { _ as _export_sfc, o as openBlock, c as createElementBlock, b as createBaseVNode, n as normalizeClass, z as withModifiers, F as Fragment, y as renderList, t as toDisplayString, r as resolveComponent, d as createVNode, f as createTextVNode } from "./index-uFz9gIqX.js";
 const _sfc_main$1 = {
   props: ["pages"],
   methods: {
@@ -152,7 +152,7 @@ const _hoisted_4 = { class: "pt-20 mb-6 fz-1 text-center fw-bold text-secondary"
 const _hoisted_5 = { class: "container" };
 const _hoisted_6 = { class: "row" };
 const _hoisted_7 = { class: "card d-flex justify-content-center align-items-center border-0" };
-const _hoisted_8 = ["src"];
+const _hoisted_8 = ["src", "alt"];
 const _hoisted_9 = { class: "card-body" };
 const _hoisted_10 = ["onClick"];
 const _hoisted_11 = { class: "container my-10 mb-md-20" };
@@ -196,7 +196,8 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
                 src: type.imgSrc,
                 width: "200",
                 height: "200",
-                class: "img-thumbnail object-fit-cover"
+                class: "img-thumbnail object-fit-cover",
+                alt: Object.values(type)[0]
               }, null, 8, _hoisted_8),
               createBaseVNode("div", _hoisted_9, [
                 createBaseVNode("a", {
@@ -261,7 +262,7 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
     ])
   ], 64);
 }
-const ProductsList = /* @__PURE__ */ _export_sfc(_sfc_main, [["render", _sfc_render], ["__scopeId", "data-v-5cee9893"]]);
+const ProductsList = /* @__PURE__ */ _export_sfc(_sfc_main, [["render", _sfc_render], ["__scopeId", "data-v-4b4f54bc"]]);
 export {
   ProductsList as default
 };

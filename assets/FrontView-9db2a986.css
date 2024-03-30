@@ -1,7 +1,7 @@
 /* * {
   border: 1px solid red
 } */
-.logo[data-v-9522b9ce] {
+.logo[data-v-d9563984] {
   background-image: url("/CoffeeWorker/assets/Logo-FswmBep0.png");
   background-repeat: no-repeat;
   background-size: cover;
@@ -14,18 +14,18 @@
   overflow: hidden;
   white-space: nowrap;
 }
-.nav-link.active.router-link-exact-active[data-v-9522b9ce] {
+.nav-link.active.router-link-exact-active[data-v-d9563984] {
   color: #ffa00b;
   border-bottom: 2px solid #ffa00b;
 }
-.animated-border[data-v-9522b9ce] {
+.animated-border[data-v-d9563984] {
   display: inline-block;
   position: relative;
   text-decoration: none;
   color: #181818;
   transition: color 0.3s;
 }
-.animated-border[data-v-9522b9ce]::before {
+.animated-border[data-v-d9563984]::before {
   content: "";
   position: absolute;
   bottom: 0;
@@ -35,20 +35,20 @@
   background-color: #ffa00b;
   transition: width 0.3s ease-in-out;
 }
-.animated-border[data-v-9522b9ce]:hover::before {
+.animated-border[data-v-d9563984]:hover::before {
   width: 100%;
 }
-.social-item[data-v-9522b9ce] {
+.social-item[data-v-d9563984] {
   list-style: none;
   width: 40px;
   height: 40px;
   background-color: #ffa00b;
 }
-.social-item[data-v-9522b9ce]:hover {
+.social-item[data-v-d9563984]:hover {
   border: 1px solid #ffa00b;
   background-color: #201617;
 }
-.line[data-v-9522b9ce] {
+.line[data-v-d9563984] {
   position: relative;
   display: block;
   height: 1px;

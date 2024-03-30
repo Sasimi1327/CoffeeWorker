@@ -1,10 +1,10 @@
-.card .card-img-container[data-v-5cee9893] {
+.card .card-img-container[data-v-4b4f54bc] {
   overflow: hidden;
   position: relative;
   height: 0;
   padding-bottom: 85%;
 }
-.card .card-img-container .productImg[data-v-5cee9893] {
+.card .card-img-container .productImg[data-v-4b4f54bc] {
   position: absolute;
   top: 0;
   left: 0;
@@ -14,7 +14,7 @@
   transition: all 0.3s ease-out;
   transform-origin: center center;
 }
-.card:hover .productImg[data-v-5cee9893] {
+.card:hover .productImg[data-v-4b4f54bc] {
   transition: all 0.7s ease-in-out;
   transform: scale(1.1);
 }

@@ -1,17 +1,17 @@
-table[data-v-ee56924c] {
+table[data-v-a0c15063] {
   border: 1px solid #ffa00b;
   border-collapse: collapse;
 }
-th[data-v-ee56924c] {
+th[data-v-a0c15063] {
   border-bottom: 1px solid #ffa00b;
 }
-.mb-n-1px[data-v-ee56924c] {
+.mb-n-1px[data-v-a0c15063] {
   margin-bottom: -1px;
 }
-.btnHoverStyle[data-v-ee56924c] {
+.btnHoverStyle[data-v-a0c15063] {
   transition: all 1s ease;
 }
-.btnHoverStyle[data-v-ee56924c]:hover {
+.btnHoverStyle[data-v-a0c15063]:hover {
   color: #181818;
   background-color: #ffa00b;
 }

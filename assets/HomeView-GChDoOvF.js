@@ -1,5 +1,5 @@
-import { h as ref, i as onUpdated, j as provide, k as watch, l as onMounted, q as onBeforeUnmount, s as h, u as onBeforeUpdate, v as computed, x as nextTick$1, _ as _export_sfc, r as resolveComponent, o as openBlock, c as createElementBlock, b as createBaseVNode, d as createVNode, w as withCtx, F as Fragment, y as renderList, e as createStaticVNode, f as createTextVNode, t as toDisplayString, z as withModifiers, A as createBlock, p as pushScopeId, g as popScopeId } from "./index-Y8Vdyrzx.js";
-import { S as Swal } from "./sweetalert2.all-y40DOsxL.js";
+import { h as ref, i as onUpdated, j as provide, k as watch, l as onMounted, q as onBeforeUnmount, s as h, u as onBeforeUpdate, v as computed, x as nextTick$1, _ as _export_sfc, r as resolveComponent, o as openBlock, c as createElementBlock, b as createBaseVNode, d as createVNode, w as withCtx, F as Fragment, y as renderList, e as createStaticVNode, f as createTextVNode, t as toDisplayString, z as withModifiers, A as createBlock, p as pushScopeId, g as popScopeId } from "./index-uFz9gIqX.js";
+import { S as Swal } from "./sweetalert2.all--pEj7bp4.js";
 function isObject$2(obj) {
   return obj !== null && typeof obj === "object" && "constructor" in obj && obj.constructor === Object;
 }
@@ -6316,10 +6316,11 @@ const _sfc_main = {
     this.getHomeProducts();
   }
 };
-const _withScopeId = (n) => (pushScopeId("data-v-9a329439"), n = n(), popScopeId(), n);
+const _withScopeId = (n) => (pushScopeId("data-v-b361e347"), n = n(), popScopeId(), n);
 const _hoisted_1 = { class: "container-fluid position-relative text-center overflow-hidden" };
 const _hoisted_2 = /* @__PURE__ */ _withScopeId(() => /* @__PURE__ */ createBaseVNode("img", {
   src: _imports_0,
+  alt: "banner",
   class: "img-fluid w-100 mh-100 object-fit-cover"
 }, null, -1));
 const _hoisted_3 = { class: "row" };
@@ -6336,7 +6337,7 @@ const _hoisted_6 = /* @__PURE__ */ _withScopeId(() => /* @__PURE__ */ createBase
   /* @__PURE__ */ createBaseVNode("span", { class: "fz-8 lh-base fw-normal" }, "不一樣的全新滋味")
 ], -1));
 const _hoisted_7 = { class: "row pb-8" };
-const _hoisted_8 = { class: "card text-center" };
+const _hoisted_8 = { class: "card text-center mb-8 mb-lg-0" };
 const _hoisted_9 = { class: "card-img-container" };
 const _hoisted_10 = ["src"];
 const _hoisted_11 = { class: "card-body" };
@@ -6344,7 +6345,7 @@ const _hoisted_12 = { class: "card-title mb-6 fz-6 lh-base fw-bold text-secondar
 const _hoisted_13 = { class: "card-text text-start" };
 const _hoisted_14 = { class: "text-dark-brown fw-normal fz-6 lh-1" };
 const _hoisted_15 = ["onClick"];
-const _hoisted_16 = /* @__PURE__ */ createStaticVNode('<div class="container my-10 my-md-20 py-10 py-md-20 bg-primary" data-v-9a329439><div class="text-center my-6 text-white" data-v-9a329439><h2 class="fz-2 lh-sm fw-normal" data-v-9a329439>咖啡，還是咖啡</h2><span class="fz-8 lh-base fw-normal text-secondary" data-v-9a329439>選豆、挑豆、烘豆、萃取，專注於咖啡</span></div><div class="row mt-4" data-v-9a329439><div class="text-white" data-v-9a329439><div class="row align-items-center" data-v-9a329439><div class="col-md-2" data-v-9a329439></div><div class="col-md-7 my-5 my-md-10" data-v-9a329439><h6 class="fz-3 mb-6" data-v-9a329439>1. 選豆（Selection）</h6><p class="fz-5 text-secondary" data-v-9a329439>咖啡製作的第一步， 咖啡師會根據不同的口味偏好和特定的需求選擇合適的咖啡豆。 選擇過程考慮因素包括咖啡豆的產地、種類、種植海拔、處理方式等。 精心挑選的咖啡豆是確保一杯優質咖啡的關鍵。</p></div></div><div class="row timeline-inner" data-v-9a329439><div class="col-md-2" data-v-9a329439></div><div class="col-md-8" data-v-9a329439><hr style="border-width:3px;" data-v-9a329439></div><div class="col-md-2" data-v-9a329439></div></div><div class="row align-items-center justify-content-end" data-v-9a329439><div class="col-md-7 my-5 my-md-10 text-md-end" data-v-9a329439><h6 class="fz-3 mb-6 text-start text-lg-end" data-v-9a329439>2. 挑豆（Roasting）</h6><p class="fz-5 text-md-start text-secondary" data-v-9a329439>咖啡豆在烘焙過程中會經歷挑豆的階段， 這是一種藝術和科學的結合。烘焙師會根據咖啡豆的特性和所需的口味， 控制烘焙的溫度、時間和烘焙方法，以達到理想的烘焙程度和風味特性。 烘焙過程會使咖啡豆釋放出豐富的香氣和風味，呈現出不同於生豆的獨特風味。</p></div><div class="col-md-2 text-center" data-v-9a329439></div></div><div class="row timeline-inner" data-v-9a329439><div class="col-md-2" data-v-9a329439></div><div class="col-md-8" data-v-9a329439><hr style="border-width:3px;" data-v-9a329439></div><div class="col-md-2" data-v-9a329439></div></div><div class="row align-items-center" data-v-9a329439><div class="col-md-2" data-v-9a329439></div><div class="col-md-7 my-5 my-md-10" data-v-9a329439><h6 class="fz-3 mb-6" data-v-9a329439>3. 烘豆（Grinding）</h6><p class="fz-5 text-secondary" data-v-9a329439>烘焙後的咖啡豆需要被研磨成合適的顆粒大小， 以便於在萃取過程中充分釋放出咖啡的風味和香氣。 研磨程度的選擇取決於所使用的咖啡萃取方式，例如浸泡式、滴濾式或者濃縮式。 合適的研磨程度可以確保咖啡在萃取過程中均勻地釋放出味道，並且保持一定的酸度和甜度。</p></div></div><div class="row timeline-inner" data-v-9a329439><div class="col-md-2" data-v-9a329439></div><div class="col-md-8" data-v-9a329439><hr style="border-width:3px;" data-v-9a329439></div><div class="col-md-2" data-v-9a329439></div></div><div class="row align-items-center justify-content-end" data-v-9a329439><div class="col-md-7 my-5 my-md-10 text-md-end" data-v-9a329439><h6 class="fz-3 mb-6 text-start text-lg-end" data-v-9a329439>4. 萃取（Extraction）</h6><p class="fz-5 text-md-start text-secondary" data-v-9a329439>萃取是將研磨後的咖啡與水接觸， 通過不同的萃取方式提取出咖啡的風味和香氣。 萃取過程中，水溫、水質、水量、浸泡時間等因素都會影響最終的咖啡口感。 精心控制萃取過程可以調整咖啡的濃度、口感和香氣，從而製作出一杯符合個人口味的完美咖啡。</p></div><div class="col-md-2 text-center" data-v-9a329439></div></div></div></div></div>', 1);
+const _hoisted_16 = /* @__PURE__ */ createStaticVNode('<div class="container my-10 my-md-20 py-10 py-md-20 bg-primary" data-v-b361e347><div class="text-center my-6 text-white" data-v-b361e347><h2 class="fz-2 lh-sm fw-normal" data-v-b361e347>咖啡，還是咖啡</h2><span class="fz-8 lh-base fw-normal text-secondary" data-v-b361e347>選豆、挑豆、烘豆、萃取，專注於咖啡</span></div><div class="row mt-4" data-v-b361e347><div class="text-white" data-v-b361e347><div class="row align-items-center" data-v-b361e347><div class="col-md-2" data-v-b361e347></div><div class="col-md-7 my-5 my-md-10" data-v-b361e347><h6 class="fz-3 mb-6" data-v-b361e347>1. 選豆（Selection）</h6><p class="fz-5 text-secondary" data-v-b361e347>咖啡製作的第一步， 咖啡師會根據不同的口味偏好和特定的需求選擇合適的咖啡豆。 選擇過程考慮因素包括咖啡豆的產地、種類、種植海拔、處理方式等。 精心挑選的咖啡豆是確保一杯優質咖啡的關鍵。</p></div></div><div class="row timeline-inner" data-v-b361e347><div class="col-md-2" data-v-b361e347></div><div class="col-md-8" data-v-b361e347><hr style="border-width:3px;" data-v-b361e347></div><div class="col-md-2" data-v-b361e347></div></div><div class="row align-items-center justify-content-end" data-v-b361e347><div class="col-md-7 my-5 my-md-10 text-md-end" data-v-b361e347><h6 class="fz-3 mb-6 text-start text-lg-end" data-v-b361e347>2. 挑豆（Roasting）</h6><p class="fz-5 text-md-start text-secondary" data-v-b361e347>咖啡豆在烘焙過程中會經歷挑豆的階段， 這是一種藝術和科學的結合。烘焙師會根據咖啡豆的特性和所需的口味， 控制烘焙的溫度、時間和烘焙方法，以達到理想的烘焙程度和風味特性。 烘焙過程會使咖啡豆釋放出豐富的香氣和風味，呈現出不同於生豆的獨特風味。</p></div><div class="col-md-2 text-center" data-v-b361e347></div></div><div class="row timeline-inner" data-v-b361e347><div class="col-md-2" data-v-b361e347></div><div class="col-md-8" data-v-b361e347><hr style="border-width:3px;" data-v-b361e347></div><div class="col-md-2" data-v-b361e347></div></div><div class="row align-items-center" data-v-b361e347><div class="col-md-2" data-v-b361e347></div><div class="col-md-7 my-5 my-md-10" data-v-b361e347><h6 class="fz-3 mb-6" data-v-b361e347>3. 烘豆（Grinding）</h6><p class="fz-5 text-secondary" data-v-b361e347>烘焙後的咖啡豆需要被研磨成合適的顆粒大小， 以便於在萃取過程中充分釋放出咖啡的風味和香氣。 研磨程度的選擇取決於所使用的咖啡萃取方式，例如浸泡式、滴濾式或者濃縮式。 合適的研磨程度可以確保咖啡在萃取過程中均勻地釋放出味道，並且保持一定的酸度和甜度。</p></div></div><div class="row timeline-inner" data-v-b361e347><div class="col-md-2" data-v-b361e347></div><div class="col-md-8" data-v-b361e347><hr style="border-width:3px;" data-v-b361e347></div><div class="col-md-2" data-v-b361e347></div></div><div class="row align-items-center justify-content-end" data-v-b361e347><div class="col-md-7 my-5 my-md-10 text-md-end" data-v-b361e347><h6 class="fz-3 mb-6 text-start text-lg-end" data-v-b361e347>4. 萃取（Extraction）</h6><p class="fz-5 text-md-start text-secondary" data-v-b361e347>萃取是將研磨後的咖啡與水接觸， 通過不同的萃取方式提取出咖啡的風味和香氣。 萃取過程中，水溫、水質、水量、浸泡時間等因素都會影響最終的咖啡口感。 精心控制萃取過程可以調整咖啡的濃度、口感和香氣，從而製作出一杯符合個人口味的完美咖啡。</p></div><div class="col-md-2 text-center" data-v-b361e347></div></div></div></div></div>', 1);
 const _hoisted_17 = { class: "container-fluid pb-10 pb-md-12 bg-coronation" };
 const _hoisted_18 = { class: "container text-center" };
 const _hoisted_19 = /* @__PURE__ */ _withScopeId(() => /* @__PURE__ */ createBaseVNode("div", { class: "text-center pt-10 pt-md-20 mb-6" }, [
@@ -6402,7 +6403,8 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
               createBaseVNode("div", _hoisted_9, [
                 createBaseVNode("img", {
                   src: product.imageUrl,
-                  class: "card-img-top"
+                  class: "card-img-top",
+                  alt: "product.id"
                 }, null, 8, _hoisted_10)
               ]),
               createBaseVNode("div", _hoisted_11, [
@@ -6453,7 +6455,6 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
         createBaseVNode("div", _hoisted_29, [
           createVNode(_component_swiper, {
             pagination: true,
-            loop: true,
             autoplay: { delay: 4e3 },
             modules: $data.modules,
             class: "mySwiper"
@@ -6501,7 +6502,7 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
     ])
   ], 64);
 }
-const HomeView = /* @__PURE__ */ _export_sfc(_sfc_main, [["render", _sfc_render], ["__scopeId", "data-v-9a329439"]]);
+const HomeView = /* @__PURE__ */ _export_sfc(_sfc_main, [["render", _sfc_render], ["__scopeId", "data-v-b361e347"]]);
 export {
   HomeView as default
 };
