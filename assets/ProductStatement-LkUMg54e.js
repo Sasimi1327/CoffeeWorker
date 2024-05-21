@@ -1,6 +1,6 @@
-import { S as Swal } from "./sweetalert2.all--pEj7bp4.js";
-import { c as cartStore } from "./cart-8NMC2yye.js";
-import { _ as _export_sfc, m as mapActions, a as mapState, r as resolveComponent, o as openBlock, c as createElementBlock, d as createVNode, b as createBaseVNode, t as toDisplayString, f as createTextVNode, B as withDirectives, C as vModelRadio, n as normalizeClass, D as vModelText, F as Fragment, y as renderList, z as withModifiers, p as pushScopeId, g as popScopeId } from "./index-uFz9gIqX.js";
+import { S as Swal } from "./sweetalert2.all-bJU75qNM.js";
+import { c as cartStore } from "./cart-CQP50JnY.js";
+import { _ as _export_sfc, m as mapActions, a as mapState, r as resolveComponent, o as openBlock, c as createElementBlock, d as createVNode, b as createBaseVNode, t as toDisplayString, f as createTextVNode, B as withDirectives, C as vModelRadio, n as normalizeClass, D as vModelText, F as Fragment, h as renderList, i as withModifiers, p as pushScopeId, g as popScopeId } from "./index-FBN-f_Ao.js";
 var define_import_meta_env_default = { VITE_URL: "https://vue3-course-api.hexschool.io/v2", VITE_PATH: "sasimi2024", BASE_URL: "/CoffeeWorker/", MODE: "production", DEV: false, PROD: true, SSR: false };
 const { VITE_URL, VITE_PATH } = define_import_meta_env_default;
 const _sfc_main = {
@@ -99,7 +99,7 @@ const _sfc_main = {
     this.getSuggestProducts();
   }
 };
-const _withScopeId = (n) => (pushScopeId("data-v-aa0f4c79"), n = n(), popScopeId(), n);
+const _withScopeId = (n) => (pushScopeId("data-v-e029c72c"), n = n(), popScopeId(), n);
 const _hoisted_1 = { class: "container py-20 mb-6" };
 const _hoisted_2 = { class: "row" };
 const _hoisted_3 = { class: "col-lg-5" };
@@ -146,38 +146,42 @@ const _hoisted_31 = { class: "mb-1 mr-1 position-relative" };
 const _hoisted_32 = { class: "mb-1 mr-1 position-relative" };
 const _hoisted_33 = { class: "mb-1 mr-1 position-relative" };
 const _hoisted_34 = /* @__PURE__ */ _withScopeId(() => /* @__PURE__ */ createBaseVNode("legend", { class: "mb-3 position-relative d-block fw-bold fz-6 lh-1" }, "數量", -1));
-const _hoisted_35 = { class: "d-flex justify-content-start mb-8 position-relative" };
-const _hoisted_36 = /* @__PURE__ */ _withScopeId(() => /* @__PURE__ */ createBaseVNode("span", { class: "material-symbols-outlined my-1 align-middle" }, "remove", -1));
-const _hoisted_37 = [
-  _hoisted_36
+const _hoisted_35 = { class: "row" };
+const _hoisted_36 = { class: "col-4 mb-8" };
+const _hoisted_37 = { class: "input-group" };
+const _hoisted_38 = { class: "input-group-button" };
+const _hoisted_39 = /* @__PURE__ */ _withScopeId(() => /* @__PURE__ */ createBaseVNode("span", { class: "material-symbols-outlined my-1 align-middle" }, "remove", -1));
+const _hoisted_40 = [
+  _hoisted_39
 ];
-const _hoisted_38 = /* @__PURE__ */ _withScopeId(() => /* @__PURE__ */ createBaseVNode("span", { class: "material-symbols-outlined my-1 align-middle" }, "add", -1));
-const _hoisted_39 = [
-  _hoisted_38
+const _hoisted_41 = { class: "input-group-button" };
+const _hoisted_42 = /* @__PURE__ */ _withScopeId(() => /* @__PURE__ */ createBaseVNode("span", { class: "material-symbols-outlined my-1 align-middle" }, "add", -1));
+const _hoisted_43 = [
+  _hoisted_42
 ];
-const _hoisted_40 = { class: "mb-3 position-relative" };
-const _hoisted_41 = { class: "container-fluid py-10 py-md-20 bg-coronation" };
-const _hoisted_42 = { class: "container text-center" };
-const _hoisted_43 = /* @__PURE__ */ _withScopeId(() => /* @__PURE__ */ createBaseVNode("div", { class: "text-center mb-6" }, [
+const _hoisted_44 = { class: "mb-3 position-relative" };
+const _hoisted_45 = { class: "container-fluid py-10 py-md-20 bg-coronation" };
+const _hoisted_46 = { class: "container text-center" };
+const _hoisted_47 = /* @__PURE__ */ _withScopeId(() => /* @__PURE__ */ createBaseVNode("div", { class: "text-center mb-6" }, [
   /* @__PURE__ */ createBaseVNode("h2", { class: "fz-2 lh-sm fw-normal" }, "你可能也會喜歡...")
 ], -1));
-const _hoisted_44 = { class: "row" };
-const _hoisted_45 = { class: "card h-100" };
-const _hoisted_46 = { class: "card-img-container" };
-const _hoisted_47 = ["src", "alt"];
-const _hoisted_48 = { class: "card-body text-start" };
-const _hoisted_49 = { class: "card-title fz-7 lh-base fw-bold" };
-const _hoisted_50 = { class: "card-text" };
-const _hoisted_51 = { key: 0 };
-const _hoisted_52 = { class: "text-decoration-none" };
-const _hoisted_53 = { class: "text-muted fw-bold fz-4" };
-const _hoisted_54 = { key: 1 };
-const _hoisted_55 = { class: "mr-1" };
-const _hoisted_56 = { class: "text-muted fw-normal fz-6 lh-1" };
-const _hoisted_57 = { class: "text-decoration-none" };
-const _hoisted_58 = { class: "text-primary fz-4" };
-const _hoisted_59 = { class: "card-footer border-0 bg-white text-end" };
-const _hoisted_60 = ["onClick"];
+const _hoisted_48 = { class: "row" };
+const _hoisted_49 = { class: "card cardZoom h-100" };
+const _hoisted_50 = { class: "cardZoom-img-container" };
+const _hoisted_51 = ["src", "alt"];
+const _hoisted_52 = { class: "card-body text-start" };
+const _hoisted_53 = { class: "card-title fz-7 lh-base fw-bold" };
+const _hoisted_54 = { class: "card-text" };
+const _hoisted_55 = { key: 0 };
+const _hoisted_56 = { class: "text-decoration-none" };
+const _hoisted_57 = { class: "text-muted fw-bold fz-4" };
+const _hoisted_58 = { key: 1 };
+const _hoisted_59 = { class: "mr-1" };
+const _hoisted_60 = { class: "text-muted fw-normal fz-6 lh-1" };
+const _hoisted_61 = { class: "text-decoration-none" };
+const _hoisted_62 = { class: "text-primary fz-4" };
+const _hoisted_63 = { class: "card-footer border-0 bg-white text-end" };
+const _hoisted_64 = ["onClick"];
 function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_VueLoading = resolveComponent("VueLoading");
   return openBlock(), createElementBlock(Fragment, null, [
@@ -232,7 +236,7 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
                   [vModelRadio, $data.selectSugar]
                 ]),
                 createBaseVNode("label", {
-                  class: normalizeClass(["btn btn-dark-brown fw-bold", { active: $data.selectSugar === "標準甜" }]),
+                  class: normalizeClass(["btn btn-coronation fw-bold text-nowrap", { active: $data.selectSugar === "標準甜" }]),
                   for: "標準甜"
                 }, "正常甜", 2)
               ]),
@@ -249,7 +253,7 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
                   [vModelRadio, $data.selectSugar]
                 ]),
                 createBaseVNode("label", {
-                  class: normalizeClass(["btn btn-dark-brown fw-bold", { active: $data.selectSugar === "7分甜" }]),
+                  class: normalizeClass(["btn btn-coronation fw-bold text-nowrap", { active: $data.selectSugar === "7分甜" }]),
                   for: "7分甜"
                 }, "少糖", 2)
               ]),
@@ -266,7 +270,7 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
                   [vModelRadio, $data.selectSugar]
                 ]),
                 createBaseVNode("label", {
-                  class: normalizeClass(["btn btn-dark-brown fw-bold", { active: $data.selectSugar === "5分甜" }]),
+                  class: normalizeClass(["btn btn-coronation fw-bold text-nowrap", { active: $data.selectSugar === "5分甜" }]),
                   for: "5分甜"
                 }, "半糖", 2)
               ]),
@@ -283,7 +287,7 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
                   [vModelRadio, $data.selectSugar]
                 ]),
                 createBaseVNode("label", {
-                  class: normalizeClass(["btn btn-dark-brown fw-bold", { active: $data.selectSugar === "3分甜" }]),
+                  class: normalizeClass(["btn btn-coronation fw-bold text-nowrap", { active: $data.selectSugar === "3分甜" }]),
                   for: "3分甜"
                 }, "微糖", 2)
               ]),
@@ -300,7 +304,7 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
                   [vModelRadio, $data.selectSugar]
                 ]),
                 createBaseVNode("label", {
-                  class: normalizeClass(["btn btn-dark-brown fw-bold", { active: $data.selectSugar === "健康甜" }]),
+                  class: normalizeClass(["btn btn-coronation fw-bold text-nowrap", { active: $data.selectSugar === "健康甜" }]),
                   for: "健康甜"
                 }, "無糖", 2)
               ])
@@ -320,7 +324,7 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
                   [vModelRadio, $data.selectIce]
                 ]),
                 createBaseVNode("label", {
-                  class: normalizeClass(["btn btn-dark-brown fw-bold", { active: $data.selectIce === "正常冰" }]),
+                  class: normalizeClass(["btn btn-coronation fw-bold text-nowrap", { active: $data.selectIce === "正常冰" }]),
                   for: "正常冰"
                 }, "正常冰", 2)
               ]),
@@ -337,7 +341,7 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
                   [vModelRadio, $data.selectIce]
                 ]),
                 createBaseVNode("label", {
-                  class: normalizeClass(["btn btn-dark-brown fw-bold", { active: $data.selectIce === "微冰" }]),
+                  class: normalizeClass(["btn btn-coronation fw-bold text-nowrap", { active: $data.selectIce === "微冰" }]),
                   for: "微冰"
                 }, "微冰", 2)
               ]),
@@ -354,7 +358,7 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
                   [vModelRadio, $data.selectIce]
                 ]),
                 createBaseVNode("label", {
-                  class: normalizeClass(["btn btn-dark-brown fw-bold", { active: $data.selectIce === "去冰" }]),
+                  class: normalizeClass(["btn btn-coronation fw-bold text-nowrap", { active: $data.selectIce === "去冰" }]),
                   for: "去冰"
                 }, "去冰", 2)
               ]),
@@ -371,7 +375,7 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
                   [vModelRadio, $data.selectIce]
                 ]),
                 createBaseVNode("label", {
-                  class: normalizeClass(["btn btn-dark-brown fw-bold", { active: $data.selectIce === "常溫" }]),
+                  class: normalizeClass(["btn btn-coronation fw-bold text-nowrap", { active: $data.selectIce === "常溫" }]),
                   for: "常溫"
                 }, "常溫", 2)
               ]),
@@ -388,7 +392,7 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
                   [vModelRadio, $data.selectIce]
                 ]),
                 createBaseVNode("label", {
-                  class: normalizeClass(["btn btn-dark-brown fw-bold", { active: $data.selectIce === "溫" }]),
+                  class: normalizeClass(["btn btn-coronation fw-bold text-nowrap", { active: $data.selectIce === "溫" }]),
                   for: "溫"
                 }, "溫", 2)
               ]),
@@ -405,39 +409,47 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
                   [vModelRadio, $data.selectIce]
                 ]),
                 createBaseVNode("label", {
-                  class: normalizeClass(["btn btn-dark-brown fw-bold", { active: $data.selectIce === "熱" }]),
+                  class: normalizeClass(["btn btn-coronation fw-bold text-nowrap", { active: $data.selectIce === "熱" }]),
                   for: "熱"
                 }, "熱", 2)
               ])
             ]),
             _hoisted_34,
             createBaseVNode("div", _hoisted_35, [
-              createBaseVNode("button", {
-                type: "button",
-                class: "bg-white border-black",
-                onClick: _cache[12] || (_cache[12] = ($event) => $data.qty > 1 ? $data.qty-- : "")
-              }, _hoisted_37),
-              withDirectives(createBaseVNode("input", {
-                type: "number",
-                name: "quantity",
-                min: "1",
-                value: "1",
-                disabled: "",
-                class: "w-10 bg-white",
-                "onUpdate:modelValue": _cache[13] || (_cache[13] = ($event) => $data.qty = $event)
-              }, null, 512), [
-                [vModelText, $data.qty]
-              ]),
-              createBaseVNode("button", {
-                type: "button",
-                class: "bg-white border-black",
-                onClick: _cache[14] || (_cache[14] = ($event) => $data.qty++)
-              }, _hoisted_39)
+              createBaseVNode("div", _hoisted_36, [
+                createBaseVNode("div", _hoisted_37, [
+                  createBaseVNode("div", _hoisted_38, [
+                    createBaseVNode("button", {
+                      type: "button",
+                      class: "bg-white border-black",
+                      onClick: _cache[12] || (_cache[12] = ($event) => $data.qty > 1 ? $data.qty-- : "")
+                    }, _hoisted_40)
+                  ]),
+                  withDirectives(createBaseVNode("input", {
+                    type: "number",
+                    name: "quantity",
+                    min: "1",
+                    value: "1",
+                    disabled: "",
+                    class: "form-control border border-secondary w-10 bg-white",
+                    "onUpdate:modelValue": _cache[13] || (_cache[13] = ($event) => $data.qty = $event)
+                  }, null, 512), [
+                    [vModelText, $data.qty]
+                  ]),
+                  createBaseVNode("div", _hoisted_41, [
+                    createBaseVNode("button", {
+                      type: "button",
+                      class: "bg-white border-black",
+                      onClick: _cache[14] || (_cache[14] = ($event) => $data.qty++)
+                    }, _hoisted_43)
+                  ])
+                ])
+              ])
             ]),
-            createBaseVNode("div", _hoisted_40, [
+            createBaseVNode("div", _hoisted_44, [
               createBaseVNode("button", {
                 type: "button",
-                class: "px-10 py-4 border-0 rounded-2 w-50 bg-primary fw-bold fz-5 btn-addCart",
+                class: "py-4 border-0 rounded-2 w-100 bg-primary fw-bold fz-4 btn-addCart text-nowrap",
                 onClick: _cache[15] || (_cache[15] = ($event) => _ctx.addToCart($data.selectProduct.id, $data.selectSugar, $data.selectIce, $data.qty))
               }, "加入購物車")
             ])
@@ -445,48 +457,48 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
         ])
       ])
     ]),
-    createBaseVNode("div", _hoisted_41, [
-      createBaseVNode("div", _hoisted_42, [
-        _hoisted_43,
-        createBaseVNode("div", _hoisted_44, [
+    createBaseVNode("div", _hoisted_45, [
+      createBaseVNode("div", _hoisted_46, [
+        _hoisted_47,
+        createBaseVNode("div", _hoisted_48, [
           (openBlock(true), createElementBlock(Fragment, null, renderList($data.suggestProductsShuffle, (product) => {
             return openBlock(), createElementBlock("div", {
               class: "col-md-6 col-lg-3 mb-8",
               key: product.id
             }, [
-              createBaseVNode("div", _hoisted_45, [
-                createBaseVNode("div", _hoisted_46, [
+              createBaseVNode("div", _hoisted_49, [
+                createBaseVNode("div", _hoisted_50, [
                   createBaseVNode("img", {
                     src: product.imageUrl,
-                    class: "card-img-top productImg",
+                    class: "card-img-top cardZoom-img-top productImg",
                     alt: product.id
-                  }, null, 8, _hoisted_47)
+                  }, null, 8, _hoisted_51)
                 ]),
-                createBaseVNode("div", _hoisted_48, [
-                  createBaseVNode("h5", _hoisted_49, toDisplayString(product.title), 1),
-                  createBaseVNode("p", _hoisted_50, [
-                    product.price === product.origin_price ? (openBlock(), createElementBlock("span", _hoisted_51, [
+                createBaseVNode("div", _hoisted_52, [
+                  createBaseVNode("h5", _hoisted_53, toDisplayString(product.title), 1),
+                  createBaseVNode("p", _hoisted_54, [
+                    product.price === product.origin_price ? (openBlock(), createElementBlock("span", _hoisted_55, [
                       createTextVNode(" NT$ "),
-                      createBaseVNode("ins", _hoisted_52, [
-                        createBaseVNode("span", _hoisted_53, toDisplayString(product.price), 1)
+                      createBaseVNode("ins", _hoisted_56, [
+                        createBaseVNode("span", _hoisted_57, toDisplayString(product.price), 1)
                       ])
-                    ])) : (openBlock(), createElementBlock("span", _hoisted_54, [
+                    ])) : (openBlock(), createElementBlock("span", _hoisted_58, [
                       createTextVNode(" NT$ "),
-                      createBaseVNode("s", _hoisted_55, [
-                        createBaseVNode("span", _hoisted_56, toDisplayString(product.origin_price), 1)
+                      createBaseVNode("s", _hoisted_59, [
+                        createBaseVNode("span", _hoisted_60, toDisplayString(product.origin_price), 1)
                       ]),
-                      createBaseVNode("ins", _hoisted_57, [
-                        createBaseVNode("span", _hoisted_58, toDisplayString(product.price), 1)
+                      createBaseVNode("ins", _hoisted_61, [
+                        createBaseVNode("span", _hoisted_62, toDisplayString(product.price), 1)
                       ])
                     ]))
                   ])
                 ]),
-                createBaseVNode("div", _hoisted_59, [
+                createBaseVNode("div", _hoisted_63, [
                   createBaseVNode("button", {
                     type: "button",
                     onClick: withModifiers(($event) => $options.productStatement(`${product.id}`), ["prevent"]),
-                    class: "w-100 btn btn-primary stretched-link mb-5 py-3 text-white fz-6 fw-bold"
-                  }, "商品明細", 8, _hoisted_60)
+                    class: "w-100 btn btn-primary stretched-link mb-4 py-3 text-white fz-5 fw-bold"
+                  }, "商品明細", 8, _hoisted_64)
                 ])
               ])
             ]);
@@ -496,7 +508,7 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
     ])
   ], 64);
 }
-const ProductStatement = /* @__PURE__ */ _export_sfc(_sfc_main, [["render", _sfc_render], ["__scopeId", "data-v-aa0f4c79"]]);
+const ProductStatement = /* @__PURE__ */ _export_sfc(_sfc_main, [["render", _sfc_render], ["__scopeId", "data-v-e029c72c"]]);
 export {
   ProductStatement as default
 };

@@ -1,10 +1,14 @@
-.card .card-img-container[data-v-4b4f54bc] {
+.swiper-free-mode > .swiper-wrapper {
+  transition-timing-function: ease-out;
+  margin: 0 auto;
+}
+.card .card-img-container[data-v-bcda788a] {
   overflow: hidden;
   position: relative;
   height: 0;
   padding-bottom: 85%;
 }
-.card .card-img-container .productImg[data-v-4b4f54bc] {
+.card .card-img-container .productImg[data-v-bcda788a] {
   position: absolute;
   top: 0;
   left: 0;
@@ -14,7 +18,7 @@
   transition: all 0.3s ease-out;
   transform-origin: center center;
 }
-.card:hover .productImg[data-v-4b4f54bc] {
+.card:hover .productImg[data-v-bcda788a] {
   transition: all 0.7s ease-in-out;
   transform: scale(1.1);
 }

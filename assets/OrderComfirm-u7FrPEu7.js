@@ -1,5 +1,5 @@
-import { S as Swal } from "./sweetalert2.all--pEj7bp4.js";
-import { _ as _export_sfc, r as resolveComponent, o as openBlock, c as createElementBlock, b as createBaseVNode, d as createVNode, w as withCtx, F as Fragment, y as renderList, f as createTextVNode, t as toDisplayString, z as withModifiers, e as createStaticVNode, p as pushScopeId, g as popScopeId } from "./index-uFz9gIqX.js";
+import { S as Swal } from "./sweetalert2.all-bJU75qNM.js";
+import { _ as _export_sfc, E as currency, r as resolveComponent, o as openBlock, c as createElementBlock, b as createBaseVNode, d as createVNode, w as withCtx, F as Fragment, h as renderList, f as createTextVNode, t as toDisplayString, i as withModifiers, e as createStaticVNode, p as pushScopeId, g as popScopeId } from "./index-FBN-f_Ao.js";
 var define_import_meta_env_default = { VITE_URL: "https://vue3-course-api.hexschool.io/v2", VITE_PATH: "sasimi2024", BASE_URL: "/CoffeeWorker/", MODE: "production", DEV: false, PROD: true, SSR: false };
 const { VITE_URL, VITE_PATH } = define_import_meta_env_default;
 const _sfc_main = {
@@ -14,6 +14,7 @@ const _sfc_main = {
       const url = `${VITE_URL}/api/${VITE_PATH}/order/${id}`;
       this.$http.get(url).then((res) => {
         this.order = res.data.order;
+        console.log(res);
       }).catch((err) => {
         Swal.fire({
           toast: true,
@@ -64,17 +65,20 @@ const _sfc_main = {
           timer: 3e3
         });
       });
+    },
+    getPercent(number) {
+      return currency(Number(number));
     }
   },
   mounted() {
     this.getOrder();
   }
 };
-const _withScopeId = (n) => (pushScopeId("data-v-4e7cbd93"), n = n(), popScopeId(), n);
+const _withScopeId = (n) => (pushScopeId("data-v-1211701d"), n = n(), popScopeId(), n);
 const _hoisted_1 = { class: "container my-10 my-md-20" };
 const _hoisted_2 = { class: "d-flex justify-content-between align-items-center py-4" };
 const _hoisted_3 = /* @__PURE__ */ _withScopeId(() => /* @__PURE__ */ createBaseVNode("h3", null, "訂單確認", -1));
-const _hoisted_4 = /* @__PURE__ */ createStaticVNode('<div class="d-none d-md-block" data-v-4e7cbd93><ul class="row list-unstyled py-4 mb-0 border border-2 border-bottom-0 fw-bold" data-v-4e7cbd93><li class="col-md-5 text-center" data-v-4e7cbd93>商品資訊</li><li class="col-md-2 text-start" data-v-4e7cbd93>價格</li><li class="col-md-1 text-start" data-v-4e7cbd93>甜度</li><li class="col-md-1 text-start" data-v-4e7cbd93>溫度</li><li class="col-md-1 text-start" data-v-4e7cbd93>數量</li><li class="col-md-2 text-start" data-v-4e7cbd93>小計</li></ul></div>', 1);
+const _hoisted_4 = /* @__PURE__ */ createStaticVNode('<div class="d-none d-md-block" data-v-1211701d><ul class="row list-unstyled py-4 mb-0 border border-2 border-bottom-0 fw-bold" data-v-1211701d><li class="col-md-5 text-center" data-v-1211701d>商品資訊</li><li class="col-md-2 text-start" data-v-1211701d>價格</li><li class="col-md-1 text-start" data-v-1211701d>甜度</li><li class="col-md-1 text-start" data-v-1211701d>溫度</li><li class="col-md-1 text-start" data-v-1211701d>數量</li><li class="col-md-2 text-start" data-v-1211701d>小計</li></ul></div>', 1);
 const _hoisted_5 = { class: "col-md-5 mb-4 mb-md-0 d-none d-md-block" };
 const _hoisted_6 = ["src", "alt"];
 const _hoisted_7 = { class: "col-6 col-md-2 my-3 mb-md-0 d-md-none" };
@@ -173,14 +177,14 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
           ]),
           createBaseVNode("li", _hoisted_17, [
             _hoisted_18,
-            createTextVNode(" NT$ " + toDisplayString(item.final_total), 1)
+            createTextVNode(" NT$ " + toDisplayString($options.getPercent(item.final_total)), 1)
           ])
         ]);
       }), 128)),
       createBaseVNode("div", _hoisted_19, [
         createBaseVNode("div", _hoisted_20, [
           _hoisted_21,
-          createTextVNode(" NT$ " + toDisplayString($data.order.total), 1)
+          createTextVNode(" NT$ " + toDisplayString($options.getPercent($data.order.total)), 1)
         ])
       ])
     ]),
@@ -220,7 +224,7 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
         _hoisted_43,
         createBaseVNode("li", _hoisted_44, [
           _hoisted_45,
-          createTextVNode(" " + toDisplayString($data.order.msg), 1)
+          createTextVNode(" " + toDisplayString($data.order.message), 1)
         ])
       ])
     ]),
@@ -235,7 +239,7 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
     ])
   ], 64);
 }
-const OrderComfirm = /* @__PURE__ */ _export_sfc(_sfc_main, [["render", _sfc_render], ["__scopeId", "data-v-4e7cbd93"]]);
+const OrderComfirm = /* @__PURE__ */ _export_sfc(_sfc_main, [["render", _sfc_render], ["__scopeId", "data-v-1211701d"]]);
 export {
   OrderComfirm as default
 };

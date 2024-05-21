@@ -1,6 +1,6 @@
-import { S as Swal } from "./sweetalert2.all--pEj7bp4.js";
-import { c as cartStore } from "./cart-8NMC2yye.js";
-import { _ as _export_sfc, m as mapActions, a as mapState, r as resolveComponent, o as openBlock, c as createElementBlock, d as createVNode, b as createBaseVNode, w as withCtx, F as Fragment, y as renderList, f as createTextVNode, t as toDisplayString, E as createCommentVNode, B as withDirectives, D as vModelText, p as pushScopeId, g as popScopeId } from "./index-uFz9gIqX.js";
+import { S as Swal } from "./sweetalert2.all-bJU75qNM.js";
+import { _ as _export_sfc, m as mapActions, E as currency, a as mapState, r as resolveComponent, o as openBlock, c as createElementBlock, d as createVNode, b as createBaseVNode, w as withCtx, F as Fragment, h as renderList, f as createTextVNode, t as toDisplayString, G as createCommentVNode, B as withDirectives, D as vModelText, p as pushScopeId, g as popScopeId } from "./index-FBN-f_Ao.js";
+import { c as cartStore } from "./cart-CQP50JnY.js";
 const _sfc_main = {
   data() {
     return {
@@ -24,10 +24,16 @@ const _sfc_main = {
           this.deleteCartItem(item);
         }
       });
+    },
+    getPercent(number) {
+      return currency(Number(number));
     }
   },
   computed: {
-    ...mapState(cartStore, ["carts", "total", "final_total", "loading", "isUpdateItem", "isDelItem"])
+    ...mapState(cartStore, ["carts", "total", "final_total", "loading", "isUpdateItem", "isDelItem"]),
+    isComplete() {
+      return this.carts.length !== 0;
+    }
   },
   watch: {
     loading() {
@@ -59,7 +65,7 @@ const _sfc_main = {
     }
   }
 };
-const _withScopeId = (n) => (pushScopeId("data-v-a0c15063"), n = n(), popScopeId(), n);
+const _withScopeId = (n) => (pushScopeId("data-v-ac4fd21e"), n = n(), popScopeId(), n);
 const _hoisted_1 = { class: "container my-10 my-md-20" };
 const _hoisted_2 = { class: "d-flex justify-content-between align-items-center py-4" };
 const _hoisted_3 = /* @__PURE__ */ _withScopeId(() => /* @__PURE__ */ createBaseVNode("h3", null, "您的購物車列表", -1));
@@ -132,7 +138,10 @@ const _hoisted_35 = [
 ];
 const _hoisted_36 = { class: "col-6 my-3" };
 const _hoisted_37 = { class: "fw-bold fz-5 text-secondary" };
-const _hoisted_38 = { class: "container my-5 my-md-10" };
+const _hoisted_38 = {
+  key: 0,
+  class: "container my-5 my-md-10"
+};
 const _hoisted_39 = { class: "row align-items-center" };
 const _hoisted_40 = { class: "col-12 text-end fz-5 fw-normal" };
 const _hoisted_41 = /* @__PURE__ */ _withScopeId(() => /* @__PURE__ */ createBaseVNode("span", { class: "fz-4 fw-bold mr-3" }, "總計:", -1));
@@ -230,7 +239,7 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
                     ])
                   ])
                 ]),
-                createBaseVNode("td", _hoisted_21, " NT$ " + toDisplayString(item.product.price * item.qty), 1)
+                createBaseVNode("td", _hoisted_21, " NT$ " + toDisplayString($options.getPercent(item.product.price * item.qty)), 1)
               ]);
             }), 128))
           ])
@@ -284,18 +293,18 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
                 ])
               ]),
               createBaseVNode("div", _hoisted_36, [
-                createBaseVNode("h6", _hoisted_37, "小計： NT$ " + toDisplayString(item.product.price * item.qty), 1)
+                createBaseVNode("h6", _hoisted_37, "小計： NT$ " + toDisplayString($options.getPercent(item.product.price * item.qty)), 1)
               ])
             ]);
           }), 128))
         ])
       ], 64))
     ]),
-    createBaseVNode("div", _hoisted_38, [
+    $options.isComplete ? (openBlock(), createElementBlock("div", _hoisted_38, [
       createBaseVNode("div", _hoisted_39, [
         createBaseVNode("div", _hoisted_40, [
           _hoisted_41,
-          createTextVNode(" NT$ " + toDisplayString(this.total), 1)
+          createTextVNode(" NT$ " + toDisplayString($options.getPercent(this.total)), 1)
         ]),
         this.total !== this.final_total ? (openBlock(), createElementBlock("div", _hoisted_42, [
           _hoisted_43,
@@ -314,10 +323,10 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
           _: 1
         })
       ])
-    ])
+    ])) : createCommentVNode("", true)
   ], 64);
 }
-const CartView = /* @__PURE__ */ _export_sfc(_sfc_main, [["render", _sfc_render], ["__scopeId", "data-v-a0c15063"]]);
+const CartView = /* @__PURE__ */ _export_sfc(_sfc_main, [["render", _sfc_render], ["__scopeId", "data-v-ac4fd21e"]]);
 export {
   CartView as default
 };

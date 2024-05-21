@@ -1,17 +1,17 @@
-table[data-v-a0c15063] {
+table[data-v-ac4fd21e] {
   border: 1px solid #ffa00b;
   border-collapse: collapse;
 }
-th[data-v-a0c15063] {
+th[data-v-ac4fd21e] {
   border-bottom: 1px solid #ffa00b;
 }
-.mb-n-1px[data-v-a0c15063] {
+.mb-n-1px[data-v-ac4fd21e] {
   margin-bottom: -1px;
 }
-.btnHoverStyle[data-v-a0c15063] {
+.btnHoverStyle[data-v-ac4fd21e] {
   transition: all 1s ease;
 }
-.btnHoverStyle[data-v-a0c15063]:hover {
+.btnHoverStyle[data-v-ac4fd21e]:hover {
   color: #181818;
   background-color: #ffa00b;
 }

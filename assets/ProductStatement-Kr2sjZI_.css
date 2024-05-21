@@ -1,0 +1,17 @@
+.btn.active[data-v-e029c72c] {
+  background: #ffc044;
+  color: #fff;
+}
+.btn-addCart[data-v-e029c72c]:hover {
+  background: #ffa00b;
+  color: #fff;
+}
+.cardZoom-img-container[data-v-e029c72c] {
+  overflow: hidden;
+}
+.cardZoom-img-top[data-v-e029c72c] {
+  transition: transform 0.3s ease;
+}
+.cardZoom:hover .cardZoom-img-top[data-v-e029c72c] {
+  transform: scale(1.1);
+}

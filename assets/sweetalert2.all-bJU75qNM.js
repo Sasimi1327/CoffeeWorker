@@ -1,4 +1,4 @@
-import { I as commonjsGlobal, J as getDefaultExportFromCjs } from "./index-uFz9gIqX.js";
+import { J as commonjsGlobal, K as getDefaultExportFromCjs } from "./index-FBN-f_Ao.js";
 var sweetalert2_all = { exports: {} };
 /*!
 * sweetalert2 v11.10.6

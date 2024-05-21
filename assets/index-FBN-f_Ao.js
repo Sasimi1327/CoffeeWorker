@@ -16915,48 +16915,48 @@ function extractChangingRecords(to, from) {
 const routes = [
   {
     path: "/",
-    component: () => __vitePreload(() => import("./FrontView-c173CuFr.js"), true ? __vite__mapDeps([0,1,2]) : void 0),
+    component: () => __vitePreload(() => import("./FrontView-p-XeCbCz.js"), true ? __vite__mapDeps([0,1,2]) : void 0),
     children: [
       {
         path: "",
-        component: () => __vitePreload(() => import("./HomeView-GChDoOvF.js"), true ? __vite__mapDeps([3,4,5]) : void 0)
+        component: () => __vitePreload(() => import("./HomeView-l1Y9H0SF.js"), true ? __vite__mapDeps([3,4,5,6,7]) : void 0)
       },
       {
         path: "brand",
-        component: () => __vitePreload(() => import("./AboutView-v3vzYdNY.js"), true ? __vite__mapDeps([]) : void 0)
+        component: () => __vitePreload(() => import("./AboutView-urMXcl3T.js"), true ? __vite__mapDeps([]) : void 0)
       },
       {
         path: "products",
-        component: () => __vitePreload(() => import("./ProductsList-V9uMxTrl.js"), true ? __vite__mapDeps([6,4,7]) : void 0)
+        component: () => __vitePreload(() => import("./ProductsList-g9po29s6.js"), true ? __vite__mapDeps([8,4,5,6,9]) : void 0)
       },
       {
         path: "product/:id",
         name: "product-statement",
-        component: () => __vitePreload(() => import("./ProductStatement-YRZdjRIw.js"), true ? __vite__mapDeps([8,4,1,9]) : void 0)
+        component: () => __vitePreload(() => import("./ProductStatement-LkUMg54e.js"), true ? __vite__mapDeps([10,6,1,11]) : void 0)
       },
       {
         path: "cart",
-        component: () => __vitePreload(() => import("./CartView-aAd_NaxG.js"), true ? __vite__mapDeps([10,4,1,11]) : void 0)
+        component: () => __vitePreload(() => import("./CartView-FE3H22D4.js"), true ? __vite__mapDeps([12,6,1,13]) : void 0)
       },
       {
         path: "userinfo",
-        component: () => __vitePreload(() => import("./UserCart-H11_Fhux.js"), true ? __vite__mapDeps([12,4,1]) : void 0)
+        component: () => __vitePreload(() => import("./UserCart-XdnKfT37.js"), true ? __vite__mapDeps([14,6,1]) : void 0)
       },
       {
         path: "checkout/:id",
         name: "order-detail",
-        component: () => __vitePreload(() => import("./OrderComfirm-sPaK-huw.js"), true ? __vite__mapDeps([13,4,14]) : void 0)
+        component: () => __vitePreload(() => import("./OrderComfirm-u7FrPEu7.js"), true ? __vite__mapDeps([15,6,16]) : void 0)
       },
       {
         path: "complete",
         name: "pay-complete",
-        component: () => __vitePreload(() => import("./OrderComplete-XvDgutGx.js"), true ? __vite__mapDeps([15,16]) : void 0)
+        component: () => __vitePreload(() => import("./OrderComplete-wJLyJosb.js"), true ? __vite__mapDeps([17,18]) : void 0)
       }
     ]
   },
   {
     path: "/:pathMatch(.*)*",
-    component: () => __vitePreload(() => import("./ErrorPage-EGgkX04q.js"), true ? __vite__mapDeps([17,18]) : void 0)
+    component: () => __vitePreload(() => import("./ErrorPage-jDySEHtS.js"), true ? __vite__mapDeps([19,20]) : void 0)
   }
 ];
 const router = createRouter({
@@ -16991,16 +16991,17 @@ app.use(createPinia());
 app.use(router);
 app.mount("#app");
 export {
-  createBlock as A,
+  nextTick as A,
   withDirectives as B,
   vModelRadio as C,
   vModelText as D,
-  createCommentVNode as E,
+  currency as E,
   Fragment as F,
-  defineStore as G,
-  axios$1 as H,
-  commonjsGlobal as I,
-  getDefaultExportFromCjs as J,
+  createCommentVNode as G,
+  defineStore as H,
+  axios$1 as I,
+  commonjsGlobal as J,
+  getDefaultExportFromCjs as K,
   _export_sfc as _,
   mapState as a,
   createBaseVNode as b,
@@ -17009,29 +17010,29 @@ export {
   createStaticVNode as e,
   createTextVNode as f,
   popScopeId as g,
-  ref as h,
-  onUpdated as i,
-  provide as j,
-  watch as k,
-  onMounted as l,
+  renderList as h,
+  withModifiers as i,
+  createBlock as j,
+  ref as k,
+  onUpdated as l,
   mapActions as m,
   normalizeClass as n,
   openBlock as o,
   pushScopeId as p,
-  onBeforeUnmount as q,
+  provide as q,
   resolveComponent as r,
-  h as s,
+  watch as s,
   toDisplayString as t,
-  onBeforeUpdate as u,
-  computed as v,
+  onMounted as u,
+  onBeforeUnmount as v,
   withCtx as w,
-  nextTick as x,
-  renderList as y,
-  withModifiers as z
+  h as x,
+  onBeforeUpdate as y,
+  computed as z
 };
 function __vite__mapDeps(indexes) {
   if (!__vite__mapDeps.viteFileDeps) {
-    __vite__mapDeps.viteFileDeps = ["assets/FrontView-c173CuFr.js","assets/cart-8NMC2yye.js","assets/FrontView-9db2a986.css","assets/HomeView-GChDoOvF.js","assets/sweetalert2.all--pEj7bp4.js","assets/HomeView-CCOGt7B8.css","assets/ProductsList-V9uMxTrl.js","assets/ProductsList--T1rtpl6.css","assets/ProductStatement-YRZdjRIw.js","assets/ProductStatement-0KJI7WvU.css","assets/CartView-aAd_NaxG.js","assets/CartView-ZJRdzjVQ.css","assets/UserCart-H11_Fhux.js","assets/OrderComfirm-sPaK-huw.js","assets/OrderComfirm-ZYVTDQpi.css","assets/OrderComplete-XvDgutGx.js","assets/OrderComplete-10zjzkin.css","assets/ErrorPage-EGgkX04q.js","assets/ErrorPage-FK1VcOjv.css"]
+    __vite__mapDeps.viteFileDeps = ["assets/FrontView-p-XeCbCz.js","assets/cart-CQP50JnY.js","assets/FrontView-Ph2dz2sO.css","assets/HomeView-l1Y9H0SF.js","assets/swiper-VRALD3tU.js","assets/swiper-OAzcVFfm.css","assets/sweetalert2.all-bJU75qNM.js","assets/HomeView-To4Jt1Co.css","assets/ProductsList-g9po29s6.js","assets/ProductsList-mHk4g_JB.css","assets/ProductStatement-LkUMg54e.js","assets/ProductStatement-Kr2sjZI_.css","assets/CartView-FE3H22D4.js","assets/CartView-Zfohd6A4.css","assets/UserCart-XdnKfT37.js","assets/OrderComfirm-u7FrPEu7.js","assets/OrderComfirm-Q77CFD6n.css","assets/OrderComplete-wJLyJosb.js","assets/OrderComplete-10zjzkin.css","assets/ErrorPage-jDySEHtS.js","assets/ErrorPage-FK1VcOjv.css"]
   }
   return indexes.map((i) => __vite__mapDeps.viteFileDeps[i])
 }
