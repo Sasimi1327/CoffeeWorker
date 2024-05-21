@@ -33,5 +33,7 @@ module.exports = {
     'vue',
   ],
   rules: {
+    'linebreak-style': ['off', 'windows'],
+    'import/prefer-default-export': 'off',
   },
 };

@@ -1,6 +1,8 @@
 <script>
 import Swal from 'sweetalert2';
 
+import { currency } from '@/methods/filters';
+
 const { VITE_URL, VITE_PATH } = import.meta.env;
 export default {
   data() {
@@ -15,6 +17,7 @@ export default {
       this.$http.get(url)
         .then((res) => {
           this.order = res.data.order;
+          console.log(res);
         })
         .catch((err) => {
           Swal.fire({
@@ -69,6 +72,9 @@ export default {
             timer: 3000,
           });
         });
+    },
+    getPercent(number) {
+      return currency(Number(number));
     },
   },
   mounted() {
@@ -127,14 +133,14 @@ export default {
       </li>
       <li class="col-6 col-md-2 my-3 mb-md-0">
         <span class="d-md-none fz-6 align-middle">小計：</span>
-        NT$ {{ item.final_total }}
+        NT$ {{ getPercent(item.final_total) }}
       </li>
 
     </div>
     <div class="row align-items-center mt-4">
       <div class="col-12 text-end fz-5 fw-normal">
         <span class="fz-4 fw-bold mr-3">總計：</span>
-        NT$ {{ order.total }}
+        NT$ {{ getPercent(order.total) }}
       </div>
     </div>
 
@@ -198,7 +204,7 @@ export default {
       </li>
       <li class="col-md-6 p-4 fz-6">
         <span class="d-inline-block d-md-none fz-5 align-middle">留言：</span>
-        {{ order.msg }}
+        {{ order.message }}
       </li>
     </ul>
   </div>

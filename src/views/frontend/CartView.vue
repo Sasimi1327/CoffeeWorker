@@ -1,6 +1,7 @@
 <script>
 import Swal from 'sweetalert2';
 
+import { currency } from '@/methods/filters';
 import cartStore from '@/stores/cart';
 import { mapActions, mapState } from 'pinia';
 
@@ -28,9 +29,15 @@ export default {
         }
       });
     },
+    getPercent(number) {
+      return currency(Number(number));
+    },
   },
   computed: {
     ...mapState(cartStore, ['carts', 'total', 'final_total', 'loading', 'isUpdateItem', 'isDelItem']),
+    isComplete() {
+      return this.carts.length !== 0;
+    },
   },
   watch: {
     loading() {
@@ -122,7 +129,7 @@ export default {
               </div>
             </td>
             <td class="w-20 fw-bold fz-5">
-              NT$ {{ item.product.price * item.qty }}
+              NT$ {{ getPercent(item.product.price*item.qty) }}
             </td>
           </tr>
         </tbody>
@@ -163,17 +170,17 @@ export default {
           </div>
           <div class="col-6 my-3">
             <h6 class="fw-bold fz-5 text-secondary"
-            >小計： NT$ {{ item.product.price * item.qty }}</h6>
+            >小計： NT$ {{ getPercent(item.product.price*item.qty) }}</h6>
           </div>
         </div>
       </div>
     </template>
   </div>
-  <div class="container my-5 my-md-10">
+  <div v-if="isComplete" class="container my-5 my-md-10">
     <div class="row align-items-center">
       <div class="col-12 text-end fz-5 fw-normal">
         <span class="fz-4 fw-bold mr-3">總計:</span>
-        NT$ {{ this.total }}
+        NT$ {{ getPercent(this.total) }}
       </div>
       <div class="col-12 text-end fz-5 text-primary"
         v-if="this.total !== this.final_total">

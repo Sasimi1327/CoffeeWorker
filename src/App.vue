@@ -11,4 +11,7 @@ export default {};
   html, body {
     font-family: 'Amiri', 'Noto Sans TC', sans-serif;
   }
+  /* * {
+    border: 1px solid red;
+  } */
 </style>

@@ -152,7 +152,7 @@ export default {
                 name="btnradio" id="標準甜" autocomplete="off"
                 value="標準甜" v-model="selectSugar"
               >
-              <label class="btn btn-dark-brown fw-bold" for="標準甜"
+              <label class="btn btn-coronation fw-bold text-nowrap" for="標準甜"
                 :class="{ active: selectSugar === '標準甜'}"
               >正常甜</label>
             </div>
@@ -161,7 +161,7 @@ export default {
                 name="btnradio" id="7分甜" autocomplete="off"
                 value="7分甜" v-model="selectSugar"
               >
-              <label class="btn btn-dark-brown fw-bold" for="7分甜"
+              <label class="btn btn-coronation fw-bold text-nowrap" for="7分甜"
                 :class="{ active: selectSugar === '7分甜'}"
               >少糖</label>
             </div>
@@ -170,7 +170,7 @@ export default {
                 name="btnradio" id="5分甜" autocomplete="off"
                 value="5分甜" v-model="selectSugar"
               >
-              <label class="btn btn-dark-brown fw-bold" for="5分甜"
+              <label class="btn btn-coronation fw-bold text-nowrap" for="5分甜"
                 :class="{ active: selectSugar === '5分甜'}"
               >半糖</label>
             </div>
@@ -179,7 +179,7 @@ export default {
                 name="btnradio" id="3分甜" autocomplete="off"
                 value="3分甜" v-model="selectSugar"
               >
-              <label class="btn btn-dark-brown fw-bold" for="3分甜"
+              <label class="btn btn-coronation fw-bold text-nowrap" for="3分甜"
                 :class="{ active: selectSugar === '3分甜'}"
               >微糖</label>
             </div>
@@ -188,7 +188,7 @@ export default {
                 name="btnradio" id="健康甜" autocomplete="off"
                 value="健康甜" v-model="selectSugar"
               >
-              <label class="btn btn-dark-brown fw-bold" for="健康甜"
+              <label class="btn btn-coronation fw-bold text-nowrap" for="健康甜"
                 :class="{ active: selectSugar === '健康甜'}"
               >無糖</label>
             </div>
@@ -201,7 +201,7 @@ export default {
                 name="btnradio" id="正常冰" autocomplete="off"
                 value="正常冰" v-model="selectIce"
               >
-              <label class="btn btn-dark-brown fw-bold" for="正常冰"
+              <label class="btn btn-coronation fw-bold text-nowrap" for="正常冰"
                 :class="{ active: selectIce === '正常冰'}"
               >正常冰</label>
             </div>
@@ -210,7 +210,7 @@ export default {
                 name="btnradio" id="微冰" autocomplete="off"
                 value="微冰" v-model="selectIce"
               >
-              <label class="btn btn-dark-brown fw-bold" for="微冰"
+              <label class="btn btn-coronation fw-bold text-nowrap" for="微冰"
                 :class="{ active: selectIce === '微冰'}"
               >微冰</label>
             </div>
@@ -219,7 +219,7 @@ export default {
                 name="btnradio" id="去冰" autocomplete="off"
                 value="去冰" v-model="selectIce"
               >
-              <label class="btn btn-dark-brown fw-bold" for="去冰"
+              <label class="btn btn-coronation fw-bold text-nowrap" for="去冰"
                 :class="{ active: selectIce === '去冰'}"
               >去冰</label>
             </div>
@@ -228,7 +228,7 @@ export default {
                 name="btnradio" id="常溫" autocomplete="off"
                 value="常溫" v-model="selectIce"
               >
-              <label class="btn btn-dark-brown fw-bold" for="常溫"
+              <label class="btn btn-coronation fw-bold text-nowrap" for="常溫"
                 :class="{ active: selectIce === '常溫'}"
               >常溫</label>
             </div>
@@ -237,7 +237,7 @@ export default {
                 name="btnradio" id="溫" autocomplete="off"
                 value="溫" v-model="selectIce"
               >
-              <label class="btn btn-dark-brown fw-bold" for="溫"
+              <label class="btn btn-coronation fw-bold text-nowrap" for="溫"
                 :class="{ active: selectIce === '溫'}"
               >溫</label>
             </div>
@@ -246,14 +246,33 @@ export default {
                 name="btnradio" id="熱" autocomplete="off"
                 value="熱" v-model="selectIce"
               >
-              <label class="btn btn-dark-brown fw-bold" for="熱"
+              <label class="btn btn-coronation fw-bold text-nowrap" for="熱"
                 :class="{ active: selectIce === '熱'}"
               >熱</label>
             </div>
           </div>
 
           <legend class="mb-3 position-relative d-block fw-bold fz-6 lh-1">數量</legend>
-          <div class="d-flex justify-content-start mb-8 position-relative">
+          <div class="row">
+            <div class="col-4 mb-8">
+              <div class="input-group">
+                <div class="input-group-button">
+                  <button type="button" class="bg-white border-black"
+                    @click=" qty > 1 ? qty-- : ''">
+                    <span class="material-symbols-outlined my-1 align-middle">remove</span>
+                  </button>
+                </div>
+                <input type="number" name="quantity" min="1" value="1" disabled
+                  class="form-control border border-secondary w-10 bg-white" v-model="qty">
+                <div class="input-group-button">
+                  <button type="button" class="bg-white border-black" @click="qty++">
+                    <span class="material-symbols-outlined my-1 align-middle">add</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- <div class="d-flex justify-content-start mb-8 position-relative">
             <button type="button" class="bg-white border-black" @click=" qty > 1 ? qty-- : ''">
               <span class="material-symbols-outlined my-1 align-middle">remove</span>
             </button>
@@ -262,10 +281,10 @@ export default {
             <button type="button" class="bg-white border-black" @click="qty++">
               <span class="material-symbols-outlined my-1 align-middle">add</span>
             </button>
-          </div>
+          </div> -->
           <div class="mb-3 position-relative">
-            <button type="button" class="px-10 py-4 border-0 rounded-2 w-50
-              bg-primary fw-bold fz-5 btn-addCart"
+            <button type="button" class="py-4 border-0 rounded-2 w-100
+              bg-primary fw-bold fz-4 btn-addCart text-nowrap"
               @click="addToCart(selectProduct.id, selectSugar, selectIce, qty)"
             >加入購物車</button>
           </div>
@@ -281,9 +300,10 @@ export default {
       <div class="row">
         <div class="col-md-6 col-lg-3 mb-8"
           v-for="product in suggestProductsShuffle" :key="product.id">
-          <div class="card h-100">
-            <div class="card-img-container">
-              <img :src="product.imageUrl" class="card-img-top productImg" :alt="product.id">
+          <div class="card cardZoom h-100">
+            <div class="cardZoom-img-container">
+              <img :src="product.imageUrl"
+              class="card-img-top cardZoom-img-top productImg" :alt="product.id">
             </div>
             <div class="card-body text-start">
               <h5 class="card-title fz-7 lh-base fw-bold">{{ product.title }}</h5>
@@ -309,7 +329,7 @@ export default {
               <button type="button"
               @click.prevent="productStatement(`${product.id}`)"
               class="w-100 btn btn-primary stretched-link
-              mb-5 py-3 text-white fz-6 fw-bold">商品明細</button>
+              mb-4 py-3 text-white fz-5 fw-bold">商品明細</button>
             </div>
           </div>
         </div>
@@ -321,12 +341,23 @@ export default {
 <style lang="scss" scoped>
 .btn.active  {
   background: #ffc044;
-  color: #201617;
+  color: #fff;
 }
 .btn-addCart {
   &:hover {
     background: #ffa00b;
     color: #fff;
+  }
+}
+.cardZoom {
+  &-img-container {
+    overflow: hidden;
+  }
+  &-img-top {
+    transition: transform 0.3s ease;
+  }
+  &:hover &-img-top {
+    transform: scale(1.1);
   }
 }
 </style>

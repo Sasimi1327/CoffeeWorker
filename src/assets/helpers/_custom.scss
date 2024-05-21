@@ -91,13 +91,13 @@ $gradient: linear-gradient(180deg, $white, $coronation);
   }
 }
 
-@mixin pc {
-  @media(min-width: map-get($grid-breakpoints, "lg")){
-      @content
-  }
-};
-@mixin pad {
-  @media(min-width: map-get($grid-breakpoints, "md")){
-      @content
-  }
-};
+// @mixin pc {
+//   @media(min-width: map-get($grid-breakpoints, "lg")){
+//       @content
+//   }
+// };
+// @mixin pad {
+//   @media(min-width: map-get($grid-breakpoints, "md")){
+//       @content
+//   }
+// };

@@ -1,22 +1,35 @@
 <script>
+// import required modules
+import { FreeMode } from 'swiper/modules';
+
+// Import Swiper Vue.js components
+import { Swiper, SwiperSlide } from 'swiper/vue';
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/free-mode';
+
 import Swal from 'sweetalert2';
 import PaginationComponent from '@/components/PaginationComponent.vue';
 
-import AllCoffee from '@/assets/coffee_type/AllCoffee.avif';
-import Expresso from '@/assets/coffee_type/Expresso.avif';
-import Americano from '@/assets/coffee_type/Americano.avif';
-import MilkCoffee from '@/assets/coffee_type/MilkCoffee.avif';
-import Chocolate from '@/assets/coffee_type/Chocolate.avif';
-import Special from '@/assets/coffee_type/Special.avif';
+import AllCoffee from '@/assets/coffee_type/AllCoffee.png';
+import Expresso from '@/assets/coffee_type/Expresso.png';
+import Americano from '@/assets/coffee_type/Americano.png';
+import MilkCoffee from '@/assets/coffee_type/MilkCoffee.png';
+import Chocolate from '@/assets/coffee_type/Chocolate.png';
+import Special from '@/assets/coffee_type/Special.png';
 
 const { VITE_URL, VITE_PATH } = import.meta.env;
 
 export default {
   components: {
     PaginationComponent,
+    Swiper,
+    SwiperSlide,
   },
   data() {
     return {
+      modules: [FreeMode],
       selectType: '全部商品',
       coffeeType: [
         {
@@ -96,19 +109,47 @@ export default {
   </div>
   <div class="container">
     <div class="row">
-      <div class="col-md-4 col-lg-2" v-for="(type, idx) in coffeeType" :key="idx">
+      <div class="d-none d-md-block col-md-4 col-lg-2" v-for="(type, idx) in coffeeType" :key="idx">
         <div class="card d-flex justify-content-center align-items-center border-0">
             {{ type.imgPath }}
-          <img :src="type.imgSrc" width="200" height="200"
-            class="img-thumbnail object-fit-cover" :alt="Object.values(type)[0]">
+          <img :src="type.imgSrc" width="180" height="180"
+            class="img-thumbnail object-fit-cover d-none d-md-block" :alt="Object.values(type)[0]">
           <div class="card-body">
-            <a class="btn text-light-brown stretched-link fz-5"
+            <a class="btn text-light-brown stretched-link fz-5 text-nowrap"
+              :class="{
+                active: selectType === Object.values(type)[0],
+                disabled: selectType === Object.values(type)[0]
+              }"
               @click="updateCategory(Object.values(type)[0])"
             >
               {{ Object.values(type)[0] }}
             </a>
           </div>
         </div>
+      </div>
+      <div class="d-md-none col-12">
+
+        <swiper :pagination="{
+                  clickable: true,
+                }"
+                :slidesPerView="3"
+                :spaceBetween="15"
+                :freeMode="true"
+                :modules="modules"
+                class="mySwiper">
+          <swiper-slide v-for="(type, idx) in coffeeType" :key="idx">
+            <a class="btn text-light-brown fz-5 text-nowrap"
+              :class="{
+                active: selectType === Object.values(type)[0],
+                disabled: selectType === Object.values(type)[0]
+              }"
+              @click="updateCategory(Object.values(type)[0])"
+            >
+              {{ Object.values(type)[0] }}
+            </a>
+          </swiper-slide>
+        </swiper>
+
       </div>
     </div>
   </div>
@@ -144,7 +185,7 @@ export default {
             <button type="button"
             @click.prevent="productStatement(`${product.id}`)"
             class="w-100 btn btn-primary stretched-link
-            mb-5 py-3 text-white fz-6 fw-bold">商品明細</button>
+            mb-4 py-3 text-white fz-5 fw-bold">商品明細</button>
           </div>
         </div>
       </div>
